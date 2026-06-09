@@ -5,12 +5,12 @@ import Navbar from '../components/Navbar';
 export default function LandingHero() {
     return (
         <div id="home"
-            className="w-full bg-white text-slate-800 flex flex-col justify-between overflow-x-hidden p-4 md:p-6 lg:p-8 select-none relative"
+            className="w-full bg-white text-slate-800 flex flex-col justify-between overflow-hidden p-4 md:p-6 lg:p-8 select-none relative min-h-screen"
             style={{ fontFamily: "'Segoe UI', sans-serif" }}
         >
             {/* Background Decorative Ellipses */}
-            <img src="/Ellipse 25.svg" alt="" className='absolute -bottom-40 left-0 w-48 h-[700px] object-cover z-10 lg:block hidden' />
-            <img src="/Ellipse 26.png" alt="" className='absolute -bottom-96 right-0 w-48 h-[1000px] object-cover z-10 lg:block hidden' />
+            <img src="/Ellipse 25.svg" alt="" className='absolute bottom-0 left-0 w-48 h-[700px] object-cover z-10 lg:block hidden opacity-50' />
+            <img src="/Ellipse 26.png" alt="" className='absolute bottom-0 right-0 w-48 h-[1000px] object-cover z-10 lg:block hidden opacity-50' />
 
             <Navbar />
 
