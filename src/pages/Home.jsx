@@ -179,7 +179,7 @@ export default function LandingHero() {
                     <div className="flex flex-col justify-center items-end text-right gap-2 z-10 max-w-[50%] mt-6 md:mt-0">
                         <h2 className="text-3xl md:text-4xl font-black leading-tight">
                             <span className="text-[#FFCC00]">We Do</span> <br />
-                            <span className="text-[#0B2240]">Lead Generation</span>
+                            <span className="text-[#FFCC00] whitespace-nowrap">Lead Generation</span>
                         </h2>
                         <p className="text-slate-500 text-xs font-semibold my-2">
                             Generate Qualified Opportunities. <br /> Fuel Your Sales Pipeline.
