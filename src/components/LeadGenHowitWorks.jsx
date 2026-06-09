@@ -12,7 +12,15 @@ export default function HowItWorksTimeline() {
         {
             number: "02",
             title: "Research & List Building",
-            description: "Using LinkedIn Sales Navigator and Apollo for data extraction, combined with CRM tools like HubSpot and Zoho, we build a targeted prospect list of companies and decision-makers matching your ICP. Every contact is reviewed for relevance and quality before the campaign begins.",
+            description: (
+                <>
+                    Using{" "}
+                    <span className="text-[#FAC207]">
+                        LinkedIn Sales Navigator and Apollo
+                    </span>{" "}
+                    for data extraction, combined with CRM tools like <span className="text-[#FAC207]">HubSpot and Zoho</span>, we build a targeted prospect list of companies and decision-makers matching your ICP. Every contact is reviewed for relevance and quality before the campaign begins.
+                </>
+            ),
             image: "/re2.png",
             imageAlt: "Research and Data List View"
         },
@@ -26,7 +34,9 @@ export default function HowItWorksTimeline() {
         {
             number: "04",
             title: "Campaign Execution",
-            description: "We run your LinkedIn and email campaigns, managing connection requests, follow-ups, and sequencing across both channels. Email marketing is executed via Mailchimp, where applicable. WhatsApp follow-up touchpoints are managed through Watt, Website visitor tracking—anonymity is broken via WarmLeads, LeadFeeder, and Snitcher—helps us identify warm prospects who are already engaging with your brand.",
+            description: (
+                <> We run your LinkedIn and email campaigns, managing connection requests, follow-ups, and sequencing across both channels. Email marketing is executed via <span className="text-[#FAC207]">Mailchimp</span>, where applicable. WhatsApp follow-up touchpoints are managed through <span className="text-[#FAC207]">Wati</span>, Website visitor tracking—anonymity is broken via WarmLeads, <span className="text-[#FAC207]">Snitcher,LeadFeeder, and Kwanzoo</span> helps us identify warm prospects who are already engaging with your brand.</>
+            ),
             image: "/re4.png",
             imageAlt: "Automation Workflows Illustration"
         },
@@ -40,21 +50,21 @@ export default function HowItWorksTimeline() {
         {
             number: "06",
             title: "Reporting & Optimisation",
-            description: "You receive regular performance updates covering reply rates, connection acceptance rates, and leads generated. All communication and reporting is managed through Slack and email. Campaign data flows into HubSpot or Zoho CRM for your team's full visibility. Campaigns are continuously refined based on what the data shows.",
+            description: (<> You receive regular performance updates covering reply rates, connection acceptance rates, and leads generated.All communication and reporting is managed through <span className="text-[#FAC207]">Slack</span> and email.Campaign data flows into <span className="text-[#FAC207]">HubSpot</span> or <span className="text-[#FAC207]">Zoho CRM</span> for your team's full visibility. Campaigns are continuously refined based on what the data shows</>),
             image: "/re6.png",
             imageAlt: "Reporting Optimization Charts"
         },
         {
             number: "07",
             title: "Warm Handoffs to Your Team",
-            description: "When a prospect is ready to talk, we hand the conversation over to you or book a meeting directly onto your calendar via Calendly. These meetings are facilitated over Zoom or Google Meet, depending on your preference. Your sales team picks up from a warm, qualified starting point with all documented summaries safer.",
+            description: (<> When a prospect is ready to talk, we hand the conversation over to you or book a meeting directly onto your calendar via <span className="text-[#FAC207]">Calendly</span>. These meetings are facilitated over <span className="text-[#FAC207]">Zoom</span> or <span className="text-[#FAC207]">Google Meet</span>, depending on your preference. Your sales team picks up from a warm, qualified starting point with all documented summaries safer.</>),
             image: "/re7.png",
             imageAlt: "Sales Pipeline Pipeline Win Graphic"
         }
     ];
 
     return (
-        <section className="w-full bg-white text-[#0A2540] py-16 lg:py-24 px-4 sm:px-6 lg:px-16  relative">
+        <section className="w-full font-jakarta bg-white text-[#0A2540] py-16 lg:py-24 px-4 sm:px-6 lg:px-16  relative">
             <div className="absolute top-0 left-0 right-0 h-4 bg-[#FAAF00]" />
 
             {/* Background Radial Ambient Subtle Glows */}
@@ -64,7 +74,7 @@ export default function HowItWorksTimeline() {
             {/* Main Section Header */}
             <div className="text-center max-w-2xl mx-auto mb-16 lg:mb-24">
                 <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-                    How It <span className="text-[#FAAF00]">Works ?</span>
+                    How It <span className="text-[#FAC207]">Works ?</span>
                 </h2>
                 <p className="text-gray-500 text-xs sm:text-sm font-medium tracking-wide mt-3">
                     From understanding to booked meetings, here's what the process involves
@@ -72,7 +82,7 @@ export default function HowItWorksTimeline() {
             </div>
 
             {/* Steps Pipeline Grid Wrapper */}
-            <div className="max-w-6xl mx-auto relative flex flex-col space-y-16 lg:space-y-28">
+            <div className="max-w-6xl mx-auto relative -mt-10 flex flex-col space-y-16 lg:space-y-16">
                 {steps.map((step, index) => {
                     const isEven = index % 2 === 1;
                     const showGlow = index % 2 === 0;
@@ -94,7 +104,7 @@ export default function HowItWorksTimeline() {
                                     {/* Upscaled Step Number Indicator Badge */}
                                     <div className="flex items-center gap-2 text-lg sm:text-xl font-bold tracking-wider text-black flex-shrink-0 select-none">
                                         <span>Step</span>
-                                        <span className="bg-[#FAAF00] text-[#0A2540] rounded-xl px-3 py-1 font-black text-base sm:text-lg shadow-sm">
+                                        <span className="bg-[#FAC207] text-[#0A2540] rounded-xl px-3 py-1 font-black text-base sm:text-lg shadow-sm">
                                             {step.number}
                                         </span>
                                     </div>
@@ -106,7 +116,7 @@ export default function HowItWorksTimeline() {
                                 </div>
 
                                 {/* Step Description context box - Falls directly down underneath the title line */}
-                                <p className="text-gray-600 text-sm ml-28 font-medium leading-relaxed pt-1">
+                                <p className=" text-sm ml-28 font-medium leading-relaxed pt-1">
                                     {step.description}
                                 </p>
                             </div>

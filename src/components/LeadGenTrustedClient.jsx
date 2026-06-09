@@ -19,8 +19,7 @@ const TrustedClients = () => {
     return (
         <section className="w-full bg-[#031430] text-white py-16 px-6 sm:px-12 lg:px-20 relative overflow-hidden select-none">
 
-            {/* Subtle bottom glowing boundary accent line */}
-            <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-yellow-500/20 to-transparent pointer-events-none" />
+
 
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 

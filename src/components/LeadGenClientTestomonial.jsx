@@ -35,12 +35,10 @@ const ClientsTestimonials = () => {
     };
 
     return (
-        <section className="w-full bg-[#041C3E] text-[#0A1A3A] py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden select-none">
-            <div className='bg-white p-4 rounded-2xl border border-[#FAC207A8]'>
+        <section className="w-full bg-[#031430] text-[#0A1A3A] py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden select-none">
+            <div className="bg-white p-4 rounded-2xl border border-[#FAC207A8] shadow-[0_0_0_1px_rgba(250,194,7,0.2),0_0_40px_rgba(250,194,7,0.6),0_0_80px_rgba(250,194,7,0.3)]">
 
                 {/* Topography wavy line design simulation overlay */}
-                <div className="absolute inset-0 opacity-[0.04] pointer-events-none bg-[radial-gradient(#0A1A3A_1px,transparent_1px)] [background-size:16px_16px] z-0" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[80%] opacity-[0.03] pointer-events-none z-0 border-[3px] border-dashed border-slate-900 rounded-[50px] transform rotate-1" />
 
                 <div className="max-w-7xl mx-auto text-center relative z-10">
 
@@ -48,7 +46,7 @@ const ClientsTestimonials = () => {
             SECTION HEADER
             ========================================================= */}
                     <div className="relative inline-block mb-3">
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0B1B3D] tracking-tight">
+                        <h2 className="text-3xl mt-10 sm:text-4xl lg:text-5xl font-black text-[#0B1B3D] tracking-tight">
                             What Clients <span className="text-[#FFBF00] relative inline-block">Says ?
                                 {/* Curved yellow text highlight stroke strip */}
                                 <span className="absolute left-0 bottom-[-4px] w-full h-[3px] bg-[#FFBF00] rounded-full opacity-80" />
@@ -56,7 +54,7 @@ const ClientsTestimonials = () => {
                         </h2>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto mb-16 font-medium leading-relaxed px-4">
+                    <p className="text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto  font-medium leading-relaxed px-4">
                         Real feedback from businesses that trusted us to build their outbound pipeline and generate qualified sales opportunities.
                     </p>
 
@@ -70,9 +68,17 @@ const ClientsTestimonials = () => {
                             <div
                                 key={item.id}
                                 className={`
-                                bg-white border border-slate-100/90 rounded-[28px] p-8 text-left shadow-[0_15px_40px_rgba(0,0,0,0.03)] flex flex-col justify-between relative transition-all duration-300 hover:shadow-[0_20px_50px_rgba(11,27,61,0.06)] hover:-translate-y-1 min-h-[340px]
-                                ${idx === 1 ? 'translate-y-6 border-slate-200/60 shadow-[0_20px_45px_rgba(11,27,61,0.04)]' : ''}
-                            `}
+    bg-white border border-black/10 rounded-[28px] p-8 text-left
+    shadow-[0_15px_40px_rgba(0,0,0,0.03)]
+    flex flex-col justify-between relative
+    transition-all duration-300
+    hover:shadow-[0_20px_50px_rgba(11,27,61,0.06)]
+    hover:-translate-y-1
+    min-h-[340px]
+
+    ${idx === 1 ? 'translate-y-8' : ''}
+    ${idx === 2 ? 'translate-y-16' : ''}
+`}
                             >
                                 <div>
                                     {/* Header Layout: Large Bold Open Quote Icon & Author Text */}

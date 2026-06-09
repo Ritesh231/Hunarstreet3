@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import Schedule from './Schedule';
+
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isDemoOpen, setIsDemoOpen] = useState(false);
+
 
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
@@ -12,7 +16,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="w-full bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+        <nav className="w-full bg-white shadow-sm  sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
 
@@ -31,32 +35,31 @@ const Navbar = () => {
                                 Home
                             </button>
                             <button
-                                onClick={() => scrollToSection('solution')}
+                                onClick={() => window.location.href = '#/recruitment'}
                                 className="text-white font-medium text-sm hover:text-yellow-500 transition-colors"
                             >
-                                Solution
+                                Recruitment
                             </button>
                             <button
-                                onClick={() => scrollToSection('services')}
+                                onClick={() => window.location.href = '#/lead-generation'}
                                 className="text-white font-medium text-sm hover:text-yellow-500 transition-colors"
                             >
-                                Services
+                                Lead Generation
                             </button>
-                            <button
-                                onClick={() => scrollToSection('industries')}
-                                className="text-white font-medium text-sm hover:text-yellow-500 transition-colors"
-                            >
-                                Industries
-                            </button>
+
                         </div>
                     </div>
 
                     {/* RIGHT: CTA Button (Hidden on Mobile) */}
                     <div className="hidden md:flex items-center">
-                        <button className="bg-[#FFC107] hover:bg-[#E0A800] text-[#031530] font-semibold px-5 py-2.5 rounded-lg shadow-[0_0_15px_rgba(255,193,7,0.3)] transition-all duration-200 text-sm">
+                        <button
+                            onClick={() => setIsDemoOpen(true)}
+                            className="bg-[#FFC107] hover:bg-[#E0A800] text-[#031530] font-semibold px-5 py-2.5 rounded-lg shadow-[0_0_15px_rgba(255,193,7,0.3)] transition-all duration-200 text-sm"
+                        >
                             Schedule Demo
                         </button>
                     </div>
+
 
                     {/* MOBILE MENU BUTTON (Hamburger Icon) */}
                     <div className="flex md:hidden">
@@ -95,31 +98,41 @@ const Navbar = () => {
                     </button>
                     <button
                         className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#051937] hover:text-yellow-500"
-                        onClick={() => scrollToSection('solution')}
+                        onClick={() => {
+                            window.location.href = '#/recruitment';
+                            setIsOpen(false);
+                        }}
                     >
-                        Solution
+                        Recruitment
                     </button>
                     <button
                         className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#051937] hover:text-yellow-500"
-                        onClick={() => scrollToSection('services')}
+                        onClick={() => {
+                            window.location.href = '#/lead-generation';
+                            setIsOpen(false);
+                        }}
                     >
-                        Services
-                    </button>
-                    <button
-                        className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#051937] hover:text-yellow-500"
-                        onClick={() => scrollToSection('industries')}
-                    >
-                        Industries
+                        Lead Generation
                     </button>
 
+
                     <div className="pt-4 border-t border-gray-700">
-                        <button className="w-full bg-[#FFC107] hover:bg-[#E0A800] text-[#031530] font-semibold px-4 py-3 rounded-md shadow-md text-center block text-base">
+                        <button
+                            onClick={() => {
+                                setIsDemoOpen(true);
+                                setIsOpen(false);
+                            }}
+                            className="w-full bg-[#FFC107] hover:bg-[#E0A800] text-[#031530] font-semibold px-4 py-3 rounded-md shadow-md text-center block text-base"
+                        >
                             Schedule Demo
                         </button>
                     </div>
+
                 </div>
             </div>
+            <Schedule isDemoOpen={isDemoOpen} setIsDemoOpen={setIsDemoOpen} />
         </nav>
+
     );
 };
 

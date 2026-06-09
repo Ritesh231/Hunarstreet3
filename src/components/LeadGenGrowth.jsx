@@ -9,7 +9,7 @@ export default function GrowthNumbersSection() {
                 <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
 
                     {/* CARD 1: Yellow Trust Card (Spans full width on mobile, left on desktop) */}
-                    <div className="bg-[#FAAF00] text-[#0A1931] rounded-[32px] p-6 sm:p-8 flex flex-col justify-between min-h-[220px] sm:col-span-2 lg:col-span-1">
+                    <div className="bg-[#FAC207] text-[#0A1931] rounded-[32px] p-6 sm:p-8 flex flex-col justify-between min-h-[220px] sm:col-span-2 lg:col-span-1">
                         {/* Stars & Avatars Row */}
                         <div className="flex items-center justify-between flex-wrap gap-4">
                             {/* 5 Stars */}
@@ -28,13 +28,13 @@ export default function GrowthNumbersSection() {
                             </div>
                         </div>
                         {/* Card Content Text */}
-                        <h3 className="text-xl sm:text-2xl font-bold leading-snug mt-6">
+                        <h3 className="text-xl sm:text-2xl  leading-snug mt-6">
                             Trusted by B2B teams who are serious about growth
                         </h3>
                     </div>
 
                     {/* CARD 2: White Progress Circle Card */}
-                    <div className="bg-white text-[#0A1931] rounded-[32px] p-6 flex flex-col items-center justify-center text-center min-h-[220px]">
+                    <div className="bg-white text-[#0A1931] rounded-[32px] p-6 flex flex-col items-center justify-center text-center min-h-[220px] w-48">
                         <div className="relative w-28 h-28 flex items-center justify-center">
 
                             {/* Outer decorative arc */}
@@ -76,24 +76,24 @@ export default function GrowthNumbersSection() {
                     </div>
 
                     {/* CARD 3: White 500+ Campaigns Executed Card */}
-                    <div className="bg-white text-[#0A1931] rounded-[32px] p-4 flex items-center gap-4 min-h-[140px]">
+                    <div className="absolute bottom-12 left-4 bg-white text-[#0A1931] rounded-[32px] p-4 flex items-center gap-4 min-h-[140px]">
                         <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
                             <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=200" alt="Team success high five" />
                         </div>
                         <div className="flex flex-col">
                             <span className="text-2xl sm:text-3xl font-black tracking-tight text-[#FAAF00]">500+</span>
-                            <span className="text-xs sm:text-sm font-bold text-slate-700 leading-tight mt-0.5">Campaigns Executed</span>
+                            <span className="text-xs sm:text-sm font-bold text-slate-700 leading-tight mt-0.5">Campaigns<br></br> Executed</span>
                         </div>
                     </div>
 
                     {/* CARD 4: White 32+ Specialists Card */}
-                    <div className="bg-white text-[#0A1931] rounded-[32px] p-4 flex items-center gap-4 min-h-[140px] relative overflow-hidden">
-                        <div className="w-20 h-24 flex-shrink-0 flex items-end justify-center self-end mb-4">
+                    <div className="bg-white text-[#0A1931] -ml-8 lg:w-72 rounded-[32px] p-4 flex items-end gap-4 min-h-[140px] relative  sm:col-start-2">
+                        <div className=" w-20 h-24 flex-shrink-0 flex items-end justify-center self-end -ml-4 mb-4">
                             <img className="w-full h-auto object-contain  scale-150" src="/RecruitHr2.png" alt="Outbound Growth Specialist" />
                         </div>
                         <div className="flex flex-col z-10 ml-4">
                             <span className="text-2xl sm:text-3xl font-black tracking-tight text-[#FAAF00]">32+</span>
-                            <span className="text-xs sm:text-sm font-bold text-slate-700 leading-tight mt-0.5">Outbound Growth Specialists</span>
+                            <span className="text-xs sm:text-sm font-bold text-slate-700 leading-tight mt-0.5">Outbound Growth<br></br>Specialists</span>
                         </div>
                     </div>
 
@@ -117,7 +117,7 @@ export default function GrowthNumbersSection() {
                         From targeted prospecting to booked meetings, our campaigns are built to deliver measurable business outcomes.
                     </p>
 
-                    <button className="bg-[#FAAF00] hover:bg-[#E09E00] text-[#0A1931] font-bold px-7 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-xs sm:text-sm tracking-wide flex items-center justify-center gap-2 group">
+                    <button className="bg-[#FAC207] hover:bg-[#E09E00] text-[#0A1931] font-bold px-7 py-3 rounded-xl shadow-[0_0_25px_rgba(250,194,7,0.55)] hover:shadow-[0_0_40px_rgba(250,194,7,0.8)] transition-all duration-300 text-xs sm:text-sm tracking-wide flex items-center justify-center gap-2 group">
                         Get In Touch
                         <span className="transform group-hover:translate-x-1 transition-transform">→</span>
                     </button>

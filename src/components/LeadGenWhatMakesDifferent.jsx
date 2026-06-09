@@ -4,8 +4,7 @@ const WhatMakesUsDifferent = () => {
     return (
         <section className="w-full min-h-screen bg-[#F9F9FB] flex items-center justify-center p-6 md:p-12 lg:p-20 relative overflow-hidden">
             <img src="/Rectangle 4(1).png" alt="" className="absolute top-0 left-0 w-full h-full object-cover z-0" />
-            {/* Background Decorative Elements (Topographic line style simulation) */}
-            <div className="absolute inset-0 opacity-5 pointer-events-none dynamic-bg-lines" />
+
 
             <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
@@ -15,10 +14,9 @@ const WhatMakesUsDifferent = () => {
                     <div className="absolute inset-0 border-2 border-dashed border-slate-300 rounded-full animate-[spin_100s_linear_infinite] p-4 hidden sm:block"></div>
 
                     {/* Main Image Placeholder */}
-                    <div className="w-[95%] h-[85%] bg-gradient-to-tr from-amber-400 to-yellow-300 rounded-full flex items-center justify-center shadow-lg border-4 border-white z-10">
-                        <span className="text-amber-900 font-semibold text-sm sm:text-base tracking-wide">
-                            <img src="/MakesDifferent.png" alt="" />
-                        </span>
+                    <div className="w-[95%] h-[85%]  rounded-full flex items-center justify-center ">
+                        <img src="/MakesDifferent.png" alt="" />
+
                     </div>
 
 

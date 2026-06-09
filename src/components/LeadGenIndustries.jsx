@@ -111,7 +111,7 @@ const IndustriesAndGrowthHub = () => {
                         </span>
 
                         {/* CTA Button */}
-                        <button className="mt-5 w-full bg-gradient-to-r from-[#FFC700] to-[#FFA800] hover:from-[#FFA800] hover:to-[#E69500] text-[#051126] font-bold text-xs py-2.5 px-4 rounded-xl flex items-center justify-center space-x-1 shadow-md shadow-amber-500/10 transition-all duration-200 active:scale-95 group">
+                        <button className="mt-5 w-48 bg-[#FAC207] hover:from-[#FFA800] hover:to-[#E69500] text-[#051126] font-semibold text-xs py-2.5 px-4 rounded-xl flex items-center justify-center space-x-1 shadow-md shadow-amber-500/10 transition-all duration-200 active:scale-95 group">
                             <span>Get Custom Quote</span>
                             <span className="transform group-hover:translate-x-0.5 transition-transform font-bold">→</span>
                         </button>

@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/
 
 const OfficeAndFooter = () => {
     return (
-        <div className="w-full bg-[#031430] text-white relative overflow-hidden select-none">
+        <div className="w-full bg-[#031430] -mt-24 text-white relative overflow-hidden select-none">
 
             {/* Topography wavy line design simulation overlay */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px] z-0" />
@@ -14,8 +14,13 @@ const OfficeAndFooter = () => {
             ========================================================= */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 text-center relative z-10">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-3 text-white">
-                    A Walk Through Our <span className="text-[#FFBF00] relative inline-block">Office
-                        <img src="/Rectangle 123.png" alt="" className='w-full h-full object-cover' />
+                    A Walk Through Our <span className="text-[#FFBF00] relative inline-block leading-none">
+                        Office
+                        <img
+                            src="/Rectangle 123.png"
+                            alt=""
+                            className="absolute left-0 -bottom-2 w-full h-auto"
+                        />
                     </span>
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto mb-12 font-medium">
@@ -41,8 +46,8 @@ const OfficeAndFooter = () => {
             {/* =========================================================
             2. CTA LAYER CONTAINER ("Let's Talk About Your Pipeline?")
             ========================================================= */}
-            <div className="w-full px-4 sm:px-6 lg:px-8 relative z-20 translate-y-[100px]">
-                <div className="max-w-4xl mx-auto bg-[#FFC700] text-[#031430] rounded-[36px] p-8 sm:p-12 text-center shadow-[0_20px_50px_rgba(255,199,0,0.3)] relative overflow-hidden">
+            <div className="w-full px-4 -mt-36 sm:px-6 lg:px-8 relative z-20 translate-y-[100px]">
+                <div className="max-w-4xl mx-auto bg-[#FFC700] text-[#031430] rounded-[36px] p-8 sm:p-12 text-center shadow-[0_0_40px_rgba(144,190,255,0.5),0_20px_60px_rgba(144,190,255,0.35)] relative overflow-hidden">
                     <div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(#031430_1.5px,transparent_1.5px)] [background-size:16px_16px] pointer-events-none" />
 
                     <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-[#031430] mb-4">

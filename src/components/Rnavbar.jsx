@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../assets/RecruitmentPageAssets/img1046 1.png';
+import Schedule from './Schedule';
+
 
 
 const Rnavbar = ({ setIsDemoOpen, isDemoOpen }) => {
@@ -100,7 +102,9 @@ const Rnavbar = ({ setIsDemoOpen, isDemoOpen }) => {
                 </div>
 
             </div>
+            <Schedule isDemoOpen={isDemoOpen} setIsDemoOpen={setIsDemoOpen} />
         </div>
+
     )
 }
 

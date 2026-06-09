@@ -43,8 +43,8 @@ const FAQSection = () => {
             {/* Main Container: Replicates the white card frame with yellow gradient glow corners */}
             <div className="max-w-6xl w-full bg-gradient-to-br from-white via-white to-[#FFFDEE] text-[#051126] rounded-[40px] shadow-2xl p-8 sm:p-12 lg:p-16 relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center">
 
-                {/* Soft radial ambient background glow inside the main container card */}
-                <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-amber-200/20 via-yellow-100/10 to-transparent blur-3xl pointer-events-none rounded-full" />
+                <img src="/Ellipse 25.svg" className='absolute -top-20 left-0 w-160 h-160 ' alt="" />
+                <img src="/Ellipse 26.png" className='absolute right-0 w-160 h-160 ' alt="" />
 
                 {/* =========================================================
             LEFT COLUMN: SECTION HEADINGS & CALL TO ACTION
@@ -67,7 +67,7 @@ const FAQSection = () => {
 
                     {/* Call to Action Button with arrow decoration */}
                     <div className="pt-4 relative w-full">
-                        <button className="bg-[#FFBF00] hover:bg-[#E6AC00] text-[#051126] font-bold text-xs sm:text-sm px-7 py-3 rounded-xl shadow-lg shadow-yellow-500/10 flex items-center space-x-2 transition-all duration-200 active:scale-95 group">
+                        <button className="bg-[#FFBF00] hover:bg-[#E6AC00] text-[#051126] font-bold text-xs sm:text-sm px-7 py-3 rounded-xl shadow-[0_0_30px_rgba(250,194,7,0.6)] hover:shadow-[0_0_45px_rgba(250,194,7,0.8)] flex items-center space-x-2 transition-all duration-300 active:scale-95 group">
                             <span>View All</span>
                             <span className="transform group-hover:translate-x-1 transition-transform font-bold">→</span>
                         </button>

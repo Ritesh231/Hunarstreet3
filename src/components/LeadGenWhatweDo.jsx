@@ -84,7 +84,7 @@ export default function StrategyChannelsSection() {
                             key={index}
                             className={`flex items-start gap-4 p-5 sm:p-6 rounded-2xl transition-all duration-200 border transform hover:-translate-y-0.5
                 ${feature.isActive
-                                    ? 'bg-[#FAAF00] text-[#0A2540] border-[#FAC2075E] shadow-md'
+                                    ? 'bg-[#FAC207] text-[#0A2540] border-[#FAC2075E] shadow-md'
                                     : 'bg-white text-[#0A2540] border-[#FAC2075E] shadow-[0_8px_25px_rgba(0,0,0,0.03)] hover:shadow-md'
                                 }`}
                         >

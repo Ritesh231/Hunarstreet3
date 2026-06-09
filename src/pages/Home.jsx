@@ -1,32 +1,16 @@
 import React from 'react';
 import { FaTelegramPlane } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+
 
 export default function LandingHero() {
     return (
-        <div
+        <div id="home"
             className="w-full min-h-screen bg-white text-slate-800 flex flex-col justify-between overflow-x-hidden p-4 md:p-6 lg:p-8 select-none"
             style={{ fontFamily: "'Segoe UI', sans-serif" }}
         >
-            {/* --- NAVBAR --- */}
-            <header className="w-full max-w-7xl mx-auto flex items-center justify-between shrink-0 mb-8">
-                {/* Brand Logo */}
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden border border-gray-200 shadow-sm">
-                    <img src="/HunarStreetLogo.svg" alt="Logo" className="w-full h-full object-contain" />
-                </div>
+            <Navbar />
 
-                {/* Center Pill Navigation */}
-                <nav className="hidden md:flex bg-[#0B2240] rounded-full px-8 py-3 items-center space-x-10 text-sm font-semibold tracking-wide shadow-lg">
-                    <Link to="/" className="text-[#FFCC00] hover:text-amber-300 transition-colors">Home</Link>
-                    <Link to="/recruitment" className="text-white/80 hover:text-white transition-colors">Recruitment</Link>
-                    <Link to="/lead-generation" className="text-white/80 hover:text-white transition-colors">Lead Generation</Link>
-                </nav>
-
-                {/* Action Button */}
-                <button className="bg-[#FFCC00] hover:bg-[#e6b800] text-[#0B2240] font-bold px-5 py-2.5 rounded-xl shadow text-xs transition-all transform active:scale-95">
-                    Schedule Demo
-                </button>
-            </header>
 
             {/* --- HERO HEADER SECTION --- */}
             <section className="w-full max-w-3xl mx-auto text-center shrink-0 mb-12 relative flex flex-col items-center">
@@ -94,7 +78,8 @@ export default function LandingHero() {
             </section>
 
             {/* --- DUAL SPLIT CARDS CONTAINER --- */}
-            <main className="w-full -mt-24 max-w-7xl mx-auto flex-1 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-40 items-stretch relative">
+            <main id="solution" className="w-full -mt-24 max-w-7xl mx-auto flex-1 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-40 items-stretch relative">
+
 
                 {/* Center Hub Logo with Connection Dotted Lines */}
                 <div className="hidden mt-16 lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30 items-center justify-center w-40 h-40 pointer-events-none">
@@ -149,10 +134,10 @@ export default function LandingHero() {
                         <p className="text-slate-500 text-xs font-semibold my-2">
                             Find The Right Talents. <br /> Build Stronger Teams.
                         </p>
-                        <Link to="/recruitment" className="bg-[#0B2240] hover:bg-[#123159] text-white text-xs font-bold px-5 py-2.5 rounded-full flex items-center gap-2 w-fit transition-all shadow-md">
+                        <button className="bg-[#0B2240] hover:bg-[#123159] text-white text-xs font-bold px-5 py-2.5 rounded-full flex items-center gap-2 w-fit transition-all shadow-md">
                             Explore Recruitment
                             <span className="group-hover:translate-x-1 transition-transform">→</span>
-                        </Link>
+                        </button>
                     </div>
 
                     {/* Right Side UI Asset Artwork */}
@@ -180,15 +165,15 @@ export default function LandingHero() {
                     <div className="flex flex-col justify-center items-end text-right gap-2 z-10 max-w-[50%] mt-6 md:mt-0">
                         <h2 className="text-3xl md:text-4xl font-black leading-tight">
                             <span className="text-[#FFCC00]">We Do</span> <br />
-                            <span className="text-[#FFCC00] whitespace-nowrap">Lead Generation</span>
+                            <span className="text-[#0B2240]">Lead Generation</span>
                         </h2>
                         <p className="text-slate-500 text-xs font-semibold my-2">
                             Generate Qualified Opportunities. <br /> Fuel Your Sales Pipeline.
                         </p>
-                        <Link to="/lead-generation" className="bg-[#FFCC00] hover:bg-[#e6b800] text-[#0B2240] text-xs font-bold px-5 py-2.5 rounded-full flex items-center gap-2 w-fit transition-all shadow-md">
+                        <button className="bg-[#FFCC00] hover:bg-[#e6b800] text-[#0B2240] text-xs font-bold px-5 py-2.5 rounded-full flex items-center gap-2 w-fit transition-all shadow-md">
                             Explore Lead Generation
                             <span className="group-hover:translate-x-1 transition-transform">→</span>
-                        </Link>
+                        </button>
                     </div>
 
                     {/* Left Side UI Asset Artwork */}

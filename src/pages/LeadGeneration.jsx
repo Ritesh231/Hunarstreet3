@@ -20,14 +20,16 @@ const LeadGeneration = () => {
             <Rnavbar setIsDemoOpen={setIsDemoOpen} isDemoOpen={isDemoOpen} />
             <LeadGenHero />
             <LeadGenSolution />
-            <LeadGenWhatweDo />
-            <LeadGenHowitWorks />
-            <LeadGenIndustries />
-            <LeadGenWhatMakesDifferent />
-            <LeadGenTrustedClient />
-            <LeadGenFrequentlyaskedQuestions />
-            <LeadGenClientTestomonial />
             <LeadGenGrowth />
+            <LeadGenHowitWorks />
+            <LeadGenWhatweDo />
+            <LeadGenWhatMakesDifferent />
+            <LeadGenIndustries />
+            <LeadGenTrustedClient />
+            <LeadGenClientTestomonial />
+            <LeadGenFrequentlyaskedQuestions />
+
+
             <LeadGenBottomSection />
         </div>
     );
