@@ -14,7 +14,7 @@ import LeadNavbar from '../components/LeadNavbar';
 
 const LeadGeneration = () => {
     const [isDemoOpen, setIsDemoOpen] = useState(false);
-
+    //latest
     return (
         <div className="w-full bg-white">
             <LeadNavbar setIsDemoOpen={setIsDemoOpen} isDemoOpen={isDemoOpen} />
@@ -38,9 +38,8 @@ const LeadGeneration = () => {
             <LeadGenTrustedClient />
             <LeadGenClientTestomonial />
             <LeadGenFrequentlyaskedQuestions />
-
-
             <LeadGenBottomSection />
+
         </div>
     );
 };
