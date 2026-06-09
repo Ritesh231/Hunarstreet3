@@ -118,7 +118,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Brand Statement Summary Card */}
-                        <div className="w-full sm:flex-1 lg:absolute lg:right-0 lg:right-[-50px] lg:-top-[50%] lg:-translate-y-1/2 lg:z-30 lg:w-[75%] bg-[#FAC207] text-[#0A2540] rounded-2xl p-4 sm:p-5 shadow-[0_15px_35px_rgba(250,175,0,0.28)] flex items-center border border-amber-400">
+                        <div className="w-full sm:flex-1 lg:absolute lg:right-0 lg:right-[-50px] lg:-top-[50%] lg:-translate-y-1/2 lg:z-30 lg:w-[80%] bg-[#FAC207] text-[#0A2540] rounded-2xl p-4 sm:p-5 shadow-[0_15px_35px_rgba(250,175,0,0.28)] flex items-center border border-amber-400">
                             <p className="text-[11px] sm:text-xs md:text-[13px] leading-relaxed tracking-wide text-center sm:text-left lg:whitespace-nowrap">
                                 HunarStreet Technologies helps B2B companies<br className="hidden lg:inline" /> connect with their ideal clients through targeted<br className="hidden lg:inline" /> LinkedIn and email campaigns run by a dedicated team.
                             </p>

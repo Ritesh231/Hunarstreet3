@@ -4,10 +4,32 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 section {
     scroll-margin-top: 100px;
+}
+
+/* Apply El Messiri to text with specific golden/yellow colors */
+.text-\[\#FAC207\],
+.text-\[\#FAAF00\],
+.text-\[\#FFC600\],
+.text-\[\#F4B400\],
+.text-\[\#FFC107\],
+.text-yellow-400,
+.text-yellow-500,
+.font-messiri,
+[style*="color: #FAC207"],
+[style*="color:#FAC207"],
+[style*="color: #FAAF00"],
+[style*="color:#FAAF00"],
+[style*="color: #FFC600"],
+[style*="color:#FFC600"] {
+    font-family: "El Messiri", sans-serif !important;
 }

@@ -7,6 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        serif: ['"El Messiri"', 'serif'],
         jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
         messiri: ['"El Messiri"', 'sans-serif'],
       },

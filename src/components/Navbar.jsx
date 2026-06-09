@@ -30,7 +30,7 @@ const Navbar = () => {
                         <div className="bg-[#031530] rounded-full px-8 py-2.5 flex items-center space-x-8 shadow-md">
                             <button
                                 onClick={() => scrollToSection('home')}
-                                className="text-yellow-500 font-semibold text-sm hover:text-yellow-400 transition-colors"
+                                className="text-yellow-500 font-semibold text-sm hover:text-yellow-400 "
                             >
                                 Home
                             </button>

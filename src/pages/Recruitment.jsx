@@ -63,7 +63,7 @@ const Recruitment = () => {
                 </div>
                 <div className='col-span-2  grid items-center justify-items-center lg:items-start lg:justify-items-start gap-4'>
 
-                    <p className='  text-center mt-20 jakarta font-semibold text-lg text-[#041C3E] bg-[#90BEFF82] p-2 rounded-lg'>Industry-Specific Hiring Experts</p>
+                    <p className='  text-center mt-20 font-jakarta font-semibold text-lg text-[#041C3E] bg-[#90BEFF82] p-2 rounded-lg'>Industry-Specific Hiring Experts</p>
                     <h2 className='text-4xl font-jakarta font-semibold text-[#041C3E] mt-6'>India's Fastest Hiring</h2>
                     <div className='flex items-center gap-4 mt-4 mb-8  justify-center lg:justify-start  flex-col sm:flex-row  items-center'>
                         <img src={hero3} alt="Hero 1" className='' />
