@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function GrowthNumbersSection() {
     return (
-        <section className="w-full bg-[#041C3E] text-white py-16 px-4 sm:px-6 lg:px-16 overflow-hidden ">
+        <section className="w-full bg-[#031430] text-white py-16 px-4 sm:px-6 lg:px-16 overflow-hidden ">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
                 {/* LEFT COLUMN: Grid Layout for Stats Cards */}

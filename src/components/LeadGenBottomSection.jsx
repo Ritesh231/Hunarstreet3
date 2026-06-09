@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/
 
 const OfficeAndFooter = () => {
     return (
-        <div className="w-full bg-[#031430] -mt-24 text-white relative overflow-hidden select-none">
+        <div className="w-full bg-[#031430]  text-white relative overflow-hidden select-none">
 
             {/* Topography wavy line design simulation overlay */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px] z-0" />

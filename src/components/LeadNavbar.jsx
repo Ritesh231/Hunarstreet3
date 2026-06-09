@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import Schedule from './Schedule';
 
-
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isDemoOpen, setIsDemoOpen] = useState(false);
-
 
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
@@ -16,12 +14,12 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="w-full bg-white  z-50">
+        <nav className="w-full bg-white shadow-sm   z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
 
                     {/* LEFT: Logo Area */}
-                    <div className="flex-shrink-0 w-14 h-14 flex items-center cursor-pointer" onClick={() => scrollToSection('home')}>
+                    <div className="flex-shrink-0 w-12 h-12 flex items-center cursor-pointer" onClick={() => scrollToSection('home')}>
                         <img src="/HunarStreetLogo.svg" alt="HunarStreetLogo" />
                     </div>
 
@@ -35,18 +33,23 @@ const Navbar = () => {
                                 Home
                             </button>
                             <button
-                                onClick={() => window.location.href = '#/recruitment'}
+                                onClick={() => scrollToSection('solution')}
                                 className="text-white font-medium text-sm hover:text-yellow-500 transition-colors"
                             >
-                                Recruitment
+                                Solution
                             </button>
                             <button
-                                onClick={() => window.location.href = '#/lead-generation'}
+                                onClick={() => scrollToSection('whatwedo')}
                                 className="text-white font-medium text-sm hover:text-yellow-500 transition-colors"
                             >
-                                Lead Generation
+                                Services
                             </button>
-
+                            <button
+                                onClick={() => scrollToSection('industries')}
+                                className="text-white font-medium text-sm hover:text-yellow-500 transition-colors"
+                            >
+                                Industries
+                            </button>
                         </div>
                     </div>
 
@@ -54,7 +57,7 @@ const Navbar = () => {
                     <div className="hidden md:flex items-center">
                         <button
                             onClick={() => setIsDemoOpen(true)}
-                            className="bg-[#FFC107] hover:bg-[#E0A800] text-[#031530] font-semibold px-5 py-2.5 rounded-lg border border-[#FFC107] shadow-[0_0_30px_rgba(255,193,7,0.55),0_0_60px_rgba(255,193,7,0.25)] hover:shadow-[0_0_45px_rgba(255,193,7,0.75),0_0_80px_rgba(255,193,7,0.35)] transition-all duration-300 text-sm"
+                            className="bg-[#FFC107] hover:bg-[#E0A800] text-[#031530] font-semibold px-5 py-2.5 rounded-lg shadow-[0_0_15px_rgba(255,193,7,0.3)] transition-all duration-200 text-sm"
                         >
                             Schedule Demo
                         </button>
@@ -103,7 +106,7 @@ const Navbar = () => {
                             setIsOpen(false);
                         }}
                     >
-                        Recruitment
+                        Solution
                     </button>
                     <button
                         className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#051937] hover:text-yellow-500"
@@ -112,9 +115,18 @@ const Navbar = () => {
                             setIsOpen(false);
                         }}
                     >
-                        Lead Generation
+                        Services
                     </button>
 
+                    <button
+                        className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#051937] hover:text-yellow-500"
+                        onClick={() => {
+                            window.location.href = '#/lead-generation';
+                            setIsOpen(false);
+                        }}
+                    >
+                        Industries
+                    </button>
 
                     <div className="pt-4 border-t border-gray-700">
                         <button

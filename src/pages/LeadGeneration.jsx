@@ -10,21 +10,31 @@ import LeadGenFrequentlyaskedQuestions from '../components/LeadGenFrequentlyaske
 import LeadGenClientTestomonial from '../components/LeadGenClientTestomonial';
 import LeadGenGrowth from '../components/LeadGenGrowth';
 import LeadGenBottomSection from '../components/LeadGenBottomSection';
-import Rnavbar from '../components/Rnavbar';
+import LeadNavbar from '../components/LeadNavbar';
 
 const LeadGeneration = () => {
     const [isDemoOpen, setIsDemoOpen] = useState(false);
 
     return (
         <div className="w-full bg-white">
-            <Rnavbar setIsDemoOpen={setIsDemoOpen} isDemoOpen={isDemoOpen} />
+            <LeadNavbar setIsDemoOpen={setIsDemoOpen} isDemoOpen={isDemoOpen} />
             <LeadGenHero />
-            <LeadGenSolution />
-            <LeadGenGrowth />
-            <LeadGenHowitWorks />
-            <LeadGenWhatweDo />
+            <div id="solution">
+                <LeadGenSolution />
+            </div>
+            <div id="growth">
+                <LeadGenGrowth />
+            </div>
+            <div id="howitworks">
+                <LeadGenHowitWorks />
+            </div>
+            <div id="whatwedo">
+                <LeadGenWhatweDo />
+            </div>
             <LeadGenWhatMakesDifferent />
-            <LeadGenIndustries />
+            <div id="industries">
+                <LeadGenIndustries />
+            </div>
             <LeadGenTrustedClient />
             <LeadGenClientTestomonial />
             <LeadGenFrequentlyaskedQuestions />

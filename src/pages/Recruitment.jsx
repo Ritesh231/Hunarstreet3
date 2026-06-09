@@ -54,14 +54,14 @@ const Recruitment = () => {
                 {/* <i className="ri-calendar-2-line text-lg"></i> */}
                 Schedule Demo
             </button>
-            <section id="home" className="min-h-screen grid grid-cols-1 text-center  lg:grid-cols-5 lg:text-left items-center justify-items-center px-8  lg:gap-8 mt-24 w-full">
+            <section id="home" className="min-h-screen grid grid-cols-1 text-center  lg:grid-cols-5 lg:text-left items-center justify-items-center px-8  lg:gap-8  w-full">
 
                 <div className='col-span-3 lg:hidden mt-24'>
 
                     <img src={hero2} alt="Section Image" className='w-full h-full object-contain' />
 
                 </div>
-                <div className='col-span-2 grid items-center justify-items-center lg:items-start lg:justify-items-start gap-4'>
+                <div className='col-span-2  grid items-center justify-items-center lg:items-start lg:justify-items-start gap-4'>
 
                     <p className='  text-center mt-20 jakarta font-semibold text-lg text-[#041C3E] bg-[#90BEFF82] p-2 rounded-lg'>Industry-Specific Hiring Experts</p>
                     <h2 className='text-4xl font-jakarta font-semibold text-[#041C3E] mt-6'>India's Fastest Hiring</h2>
@@ -364,7 +364,7 @@ const Recruitment = () => {
             </section>
 
             {/* Industries We Service & Trusted By Leading Company */}
-            <section id="industries" className="w-full bg-[#041C3E] py-24 px-6 lg:px-16 xl:px-24 flex flex-col items-center rounded-t-[40px] md:rounded-t-[80px] z-20 relative overflow-hidden">
+            <section id="industries" className="w-full bg-[#041C3E] py-24   flex flex-col items-center rounded-t-[40px] md:rounded-t-[80px] z-20 relative overflow-hidden">
                 {/* Part 1: Industries We Service */}
                 <div className="flex flex-col items-center text-center w-full mb-32">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-jakarta font-bold text-white mb-6">
@@ -413,7 +413,7 @@ const Recruitment = () => {
                 </div>
 
                 {/* Part 2: Trusted By Leading Company */}
-                <div className="w-full max-w-[1400px] flex flex-col lg:flex-row items-center justify-between gap-16 xl:gap-8  pb-12">
+                <div className="w-full -ml-36 max-w-[1000px] flex flex-col lg:flex-row  justify-between   pb-12">
                     {/* Left Text Side */}
                     <div className="max-w-2xl text-left w-full relative z-10 flex flex-col items-center xl:items-start text-center xl:text-left">
                         <div className="inline-block bg-[#4A6799] text-white font-bold text-sm px-6 py-3 rounded-lg mb-8 uppercase tracking-wider shadow-sm">
@@ -440,7 +440,7 @@ const Recruitment = () => {
                     </div>
 
                     {/* Right Logos Side */}
-                    <div className="relative w-full max-w-[680px] h-[580px] flex items-center justify-center scale-75 sm:scale-90 lg:scale-100 xl:scale-90 2xl:scale-100 origin-top xl:origin-right mt-10 xl:mt-0">
+                    <div className="relative w-full max-w-[600px] h-[580px] flex items-center justify-center scale-75 sm:scale-90 lg:scale-100 xl:scale-90 2xl:scale-100 origin-top xl:origin-right mt-10 xl:mt-0">
 
                         {/* Big Box */}
                         <div className="absolute top-[160px] left-0 w-[260px] h-[260px] bg-white rounded-[48px] shadow-2xl flex items-center justify-center p-8 hover:-translate-y-2 transition-transform duration-300">
