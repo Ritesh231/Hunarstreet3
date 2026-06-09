@@ -33,7 +33,9 @@ import tech9 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03
 import tech10 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 10.png';
 import tech11 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 11.png';
 import tech12 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 12.png';
-
+import LeadGenClientTestomonial from '../components/LeadGenClientTestomonial';
+import LeadGenGrowth from '../components/LeadGenGrowth';
+import LeadGenBottomSection from '../components/LeadGenBottomSection';
 
 
 
@@ -77,7 +79,7 @@ const Recruitment = () => {
 
                                     <div className="flex items-center gap-4">
                                         <i className="ri-phone-fill text-xl text-[#FAC207]"></i>
-                                        <span>+91 98765 43210</span>
+                                        <span>+1012 3456 789</span>
                                     </div>
 
                                     <div className="flex items-center gap-4">
@@ -89,7 +91,7 @@ const Recruitment = () => {
                                         <i className="ri-map-pin-fill text-xl text-[#FAC207] mt-1"></i>
 
                                         <span className="leading-relaxed">
-                                            B-1403, Arihant Aura,
+                                            B-1403, Arihant Aura, plot no. 13/1, TTC Industrial Area, Thane Belapur Road, Turbhe
                                             <br />
                                             Navi Mumbai,
                                             <br />
@@ -273,7 +275,7 @@ const Recruitment = () => {
 
                                     <div className="flex items-center gap-4">
                                         <i className="ri-phone-fill text-xl text-[#FAC207]"></i>
-                                        <span>+91 98765 43210</span>
+                                        <span>+1012 3456 789</span>
                                     </div>
 
                                     <div className="flex items-center gap-4">
@@ -285,7 +287,7 @@ const Recruitment = () => {
                                         <i className="ri-map-pin-fill text-xl text-[#FAC207] mt-1"></i>
 
                                         <span className="leading-relaxed">
-                                            B-1403, Arihant Aura,
+                                            B-1403, Arihant Aura,  plot no. 13/1, TTC Industrial Area, Thane Belapur Road, Turbhe
                                             <br />
                                             Navi Mumbai,
                                             <br />
@@ -824,8 +826,11 @@ const Recruitment = () => {
                         </div>
                     </div>
                 </div>
-            </section>
 
+            </section>
+            <LeadGenClientTestomonial />
+            <LeadGenGrowth />
+            <LeadGenBottomSection />
         </div>
     );
 };
