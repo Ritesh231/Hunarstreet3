@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import logo from '../assets/RecruitmentPageAssets/img1046 1.png';
 import Schedule from './Schedule';
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Rnavbar from '../components/Rnavbar.jsx';
 import blurboll from '../assets/RecruitmentPageAssets/Ellipse 36.png'
 import logo from '../assets/RecruitmentPageAssets/img1046 1.png';

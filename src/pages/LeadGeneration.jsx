@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import LeadGenHero from '../components/LeadGenHero';
 import LeadGenSolution from '../components/LeadGenSolution';
 import LeadGenWhatweDo from '../components/LeadGenWhatweDo';

@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const TrustedClients = () => {
     // Mock array representing the different logo cards on the right layout

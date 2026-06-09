@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FaTelegramPlane } from "react-icons/fa";
 import Navbar from '../components/Navbar';
 

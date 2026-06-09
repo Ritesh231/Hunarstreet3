@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const IndustriesAndGrowthHub = () => {
     // Top Section Data
@@ -21,18 +21,6 @@ const IndustriesAndGrowthHub = () => {
         },
     ];
 
-    // Bottom Node Data (Clockwise layout for absolute desktop positioning)
-    const nodes = [
-        { label: "ICP Definition", isYellow: false, pos: "lg:bottom-full lg:left-1/2 lg:-translate-x-1/2 lg:mb-12" },
-        { label: "Content Campaign", isYellow: true, pos: "lg:top-4 lg:left-full lg:ml-12" },
-        { label: "Response management", isYellow: false, pos: "lg:top-1/3 lg:left-full lg:ml-20" },
-        { label: "LinkedIn Outreach", isYellow: false, pos: "lg:bottom-4 lg:left-full lg:ml-12" },
-        { label: "Relationship Manager", isYellow: false, pos: "lg:top-full lg:left-2/3 lg:mt-12" },
-        { label: "Lead Qualification", isYellow: false, pos: "lg:top-full lg:right-2/3 lg:mt-12" },
-        { label: "Dedicated team members", isYellow: true, pos: "lg:bottom-4 lg:right-full lg:mr-12" },
-        { label: "Email Campaigns", isYellow: false, pos: "lg:top-1/3 lg:right-full lg:mr-20" },
-        { label: "Prospect List Building", isYellow: false, pos: "lg:top-4 lg:right-full lg:mr-12" },
-    ];
 
     return (
         <section className="w-full bg-[#031430] text-white py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden select-none">
