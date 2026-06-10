@@ -1,15 +1,14 @@
-
 import { FaTelegramPlane } from "react-icons/fa";
 import Navbar from '../components/Navbar';
 
 export default function LandingHero() {
     return (
         <div id="home"
-            className="w-full bg-white text-slate-800 flex flex-col justify-between overflow-hidden p-4 md:p-6 lg:p-8 select-none relative min-h-screen"
+            className="w-full bg-white text-slate-800 flex flex-col justify-between overflow-hidden p-4 md:p-6 lg:p-4 select-none relative min-h-screen"
             style={{ fontFamily: "'Segoe UI', sans-serif" }}
         >
             {/* Background Decorative Ellipses */}
-            <img src="/Ellipse 25.svg" alt="" className='absolute bottom-0 left-0 w-48 h-[700px] object-cover z-10 lg:block hidden opacity-50' />
+            <img src="/Ellipse 25.svg" alt="" className='absolute bottom-24 left-0 w-48 h-[700px] object-cover z-10 lg:block hidden  z-10' />
             <img src="/Ellipse 26.png" alt="" className='absolute bottom-0 right-0 w-48 h-[1000px] object-cover z-10 lg:block hidden opacity-50' />
 
             <Navbar />
@@ -32,8 +31,8 @@ export default function LandingHero() {
                         style={{
                             backgroundImage: "url('/Rectangle 123.png')",
                             backgroundRepeat: 'no-repeat',
-                            backgroundPosition: 'bottom center',
-                            backgroundSize: '100% 12px'
+                            backgroundPosition: 'center calc(100% + 6px)',
+                            backgroundSize: '150% 12px'
                         }}
                     >
                         Succeed.
@@ -68,7 +67,7 @@ export default function LandingHero() {
             </section>
 
             {/* =========================================================
-            DESKTOP VIEWPORT: 100% UNTOUCHED ORIGINAL CODE (Visible on lg screens up)
+            DESKTOP VIEWPORT: Only visible on desktop screens (lg up)
             ========================================================= */}
             <main id="solution" className="hidden lg:grid w-full -mt-24 max-w-7xl mx-auto flex-1 grid-cols-2 gap-40 items-stretch relative">
                 {/* Center Hub Logo with Connection Dotted Lines */}
@@ -87,7 +86,7 @@ export default function LandingHero() {
                 {/* --- DESKTOP LEFT: RECRUITMENT --- */}
                 <div className="relative rounded-[2.5rem] flex flex-col md:flex-row justify-between p-8 lg:p-10 group min-h-[380px] overflow-visible bg-no-repeat bg-cover shadow-sm"
                     style={{ backgroundImage: "url('/Vector 13.png')" }}>
-                    <div className="absolute -top-10 left-8 w-28 h-28 bg-white rounded-full shadow-lg flex items-center justify-center border border-blue-200 z-20">
+                    <div className="absolute -top-10 left-8 w-28 h-28 bg-white rounded-full border border-blue-300 z-20 flex items-center justify-center shadow-[0_-10px_40px_rgba(66,133,244,0.5)]">
                         <img src="/team1.png" alt="Team" className="w-14 h-14 object-contain" />
                     </div>
                     <div className="flex flex-col justify-center gap-2 z-10 max-w-[50%] mt-6 md:mt-0">
@@ -113,7 +112,7 @@ export default function LandingHero() {
                         </div>
                     </div>
                     <div className="flex flex-col justify-center items-end text-right gap-2 z-10 max-w-[50%] mt-6 md:mt-0">
-                        <h2 className="text-3xl md:text-4xl font-black leading-tight"><span className="text-[#FAC207]">We Do</span> <br /><span className="text-[#FAC207] whitespace-nowrap">Lead Generation</span></h2>
+                        <h2 className="text-3xl md:text-4xl font-black leading-tight font-sans"><span className="text-[#FAC207]">We Do</span> <br /><span className="text-[#FAC207] whitespace-nowrap">Lead Generation</span></h2>
                         <p className="text-slate-500 text-xs font-semibold my-2">Generate Qualified Opportunities. <br /> Fuel Your Sales Pipeline.</p>
                         <button className="bg-[#FFCC00] whitespace-nowrap hover:bg-[#e6b800] text-[#0B2240] text-sm px-5 py-2.5 rounded-xl flex items-center gap-2 w-fit transition-all duration-300 shadow-[0_0_25px_rgba(255,204,0,0.45)] hover:shadow-[0_0_40px_rgba(255,204,0,0.7)]">
                             Explore Lead Generation <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -129,12 +128,12 @@ export default function LandingHero() {
 
 
             {/* =========================================================
-            MOBILE/TABLET VIEWPORT CONTAINER: (Visible on screens below 1024px)
+            MOBILE & TABLET VIEWPORT CONTAINER: (Visible on everything below 1024px)
             ========================================================= */}
-            <main className="lg:hidden w-full flex flex-col gap-16 px-2 pb-12 relative z-20">
+            <main className="lg:hidden w-full flex flex-col gap-16 px-2 md:px-12 pb-12 relative z-20 max-w-2xl mx-auto">
 
-                {/* --- MOBILE RECRUITMENT CARD --- */}
-                <div className="relative rounded-[2rem] bg-[#F4F8FF] border border-blue-50 p-6 pt-12 flex flex-col bg-no-repeat bg-cover shadow-sm min-h-[380px]"
+                {/* --- MOBILE/TABLET RECRUITMENT CARD --- */}
+                <div className="relative rounded-[2rem] bg-[#F4F8FF] border border-blue-50 p-6 md:p-8 pt-12 flex flex-col bg-no-repeat bg-cover shadow-sm min-h-[380px] md:min-h-[420px]"
                     style={{ backgroundImage: "url('/Vector 13.png')" }}>
 
                     {/* Floating Corner Badge */}
@@ -144,25 +143,25 @@ export default function LandingHero() {
 
                     {/* Content */}
                     <div className="text-left flex flex-col gap-1">
-                        <h2 className="text-2xl font-black text-[#0B2240] leading-tight">
+                        <h2 className="text-2xl md:text-3xl font-black text-[#0B2240] leading-tight">
                             We Do <br /> Recruitment
                         </h2>
-                        <p className="text-slate-700 text-xs font-semibold my-1">
+                        <p className="text-slate-700 text-xs md:text-sm font-semibold my-1">
                             Find The Right Talents. <br /> Build Stronger Teams.
                         </p>
-                        <button className="bg-[#0B2240] text-white text-xs font-semibold px-4 py-2.5 rounded-lg flex items-center gap-2 w-fit mt-1 shadow-md">
+                        <button className="bg-[#0B2240] text-white text-xs md:text-sm font-semibold px-4 py-2.5 rounded-lg flex items-center gap-2 w-fit mt-1 shadow-md">
                             Explore Recruitment <span>→</span>
                         </button>
                     </div>
 
                     {/* Bottom Illustration Placement */}
                     <div className="w-full flex-1 flex items-end justify-end mt-4 relative min-h-[160px]">
-                        <img src="/Hunarhome1.png" alt="" className="max-w-[210px] w-full h-auto object-contain absolute bottom-0 right-0" />
+                        <img src="/Hunarhome1.png" alt="" className="max-w-[210px] md:max-w-[260px] w-full h-auto object-contain absolute bottom-0 right-0" />
                     </div>
                 </div>
 
-                {/* --- MOBILE LEAD GENERATION CARD --- */}
-                <div className="relative rounded-[2rem] bg-[#FFFBEB] border border-amber-50 p-6 pt-12 flex flex-col justify-between bg-no-repeat bg-cover shadow-sm min-h-[380px]"
+                {/* --- MOBILE/TABLET LEAD GENERATION CARD --- */}
+                <div className="relative rounded-[2rem] bg-[#FFFBEB] border border-amber-50 p-6 md:p-8 pt-12 flex flex-col justify-between bg-no-repeat bg-cover shadow-sm min-h-[380px] md:min-h-[420px]"
                     style={{ backgroundImage: "url('/Vector 14.png')" }}>
 
                     {/* Floating Corner Badge */}
@@ -170,23 +169,23 @@ export default function LandingHero() {
                         <FaTelegramPlane className="text-2xl text-[#FAC207] transform rotate-12" />
                     </div>
 
-                    {/* Content (Shifted left for optimal structural hierarchy under badge layout) */}
+                    {/* Content */}
                     <div className="text-left flex flex-col gap-1">
-                        <h2 className="text-2xl font-black text-[#0B2240] leading-tight">
+                        <h2 className="text-2xl md:text-3xl font-black text-[#0B2240] leading-tight">
                             <span className="text-[#FAC207]">We Do</span> <br />
-                            <span>Lead Generation</span>
+                            <span className="text-[#FAC207] whitespace-nowrap">Lead Generation</span>
                         </h2>
-                        <p className="text-slate-600 text-xs font-semibold my-1">
+                        <p className="text-slate-600 text-xs md:text-sm font-semibold my-1">
                             Generate Qualified Opportunities. <br /> Fuel Your Sales Pipeline.
                         </p>
-                        <button className="bg-[#FFCC00] text-[#0B2240] text-xs font-bold px-4 py-2.5 rounded-lg flex items-center gap-2 w-fit mt-1 shadow-md">
+                        <button className="bg-[#FFCC00] text-[#0B2240] text-xs md:text-sm font-bold px-4 py-2.5 rounded-lg flex items-center gap-2 w-fit mt-1 shadow-md">
                             Explore Lead Generation <span>→</span>
                         </button>
                     </div>
 
                     {/* Bottom Illustration Placement */}
                     <div className="w-full flex-1 flex items-end justify-start mt-4 relative min-h-[160px]">
-                        <img src="/Hunarhome2.png" alt="" className="max-w-[210px] w-full h-auto object-contain absolute bottom-0 left-0" />
+                        <img src="/Hunarhome2.png" alt="" className="max-w-[210px] md:max-w-[260px] w-full h-auto object-contain absolute bottom-0 left-0" />
                     </div>
                 </div>
 

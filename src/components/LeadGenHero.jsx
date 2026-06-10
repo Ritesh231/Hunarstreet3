@@ -2,7 +2,7 @@
 
 export default function HeroSection() {
     return (
-        <section className="relative w-full overflow-hidden py-8 px-4 sm:px-6 lg:px-16 bg-white lg:py-12">
+        <section className="relative w-full overflow-hidden py-8 px-4 sm:px-6 lg:px-16 bg-white lg:py-4">
             {/* Left Yellow Background Patch - Kept for Desktop */}
             <div className="absolute left-0 top-[180px] w-[420px] h-[520px] bg-gradient-to-r from-[#FAC2076E]/30 to-[#FAC2076E]/10 rounded-r-[120px] blur-[20px] z-0 hidden lg:block" />
 

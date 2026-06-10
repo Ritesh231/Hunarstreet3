@@ -413,7 +413,7 @@ const Recruitment = () => {
                 </div>
 
                 {/* Part 2: Trusted By Leading Company */}
-                <div className="w-full -ml-36 max-w-[1000px] flex flex-col lg:flex-row  justify-between   pb-12">
+                <div className="w-full md:ml-32 lg:-ml-36 max-w-[1000px] flex flex-col lg:flex-row justify-between pb-12">
                     {/* Left Text Side */}
                     <div className="max-w-2xl text-left w-full relative z-10 flex flex-col items-center xl:items-start text-center xl:text-left">
                         <div className="inline-block bg-[#4A6799] text-white font-bold text-sm px-6 py-3 rounded-lg mb-8 uppercase tracking-wider shadow-sm">

@@ -3,13 +3,13 @@
 export default function GrowthNumbersSection() {
     return (
         <section className="w-full bg-[#031430] text-white py-16 px-4 sm:px-6 lg:px-16 overflow-hidden ">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 items-center">
 
                 {/* LEFT COLUMN: Grid Layout for Stats Cards */}
-                <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
+                <div className="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 relative items-start">
 
                     {/* CARD 1: Yellow Trust Card (Spans full width on mobile, left on desktop) */}
-                    <div className="bg-[#FAC207] text-[#0A1931] rounded-[32px] p-6 sm:p-8 flex flex-col justify-between min-h-[220px] sm:col-span-2 lg:col-span-1">
+                    <div className="bg-[#FAC207] text-[#0A1931] rounded-[32px] p-6 sm:p-8 flex flex-col justify-between min-h-[220px] sm:col-span-2 md:col-span-1">
                         {/* Stars & Avatars Row */}
                         <div className="flex items-center justify-between flex-wrap gap-4">
                             {/* 5 Stars */}
@@ -34,7 +34,7 @@ export default function GrowthNumbersSection() {
                     </div>
 
                     {/* CARD 2: White Progress Circle Card */}
-                    <div className="bg-white text-[#0A1931] rounded-[32px] p-6 flex flex-col items-center justify-center text-center min-h-[220px] w-48">
+                    <div className="bg-white text-[#0A1931] rounded-[32px] p-6 flex flex-col items-center justify-center text-center min-h-[220px] w-full sm:w-48">
                         <div className="relative w-28 h-28 flex items-center justify-center">
 
                             {/* Outer decorative arc */}
@@ -76,7 +76,18 @@ export default function GrowthNumbersSection() {
                     </div>
 
                     {/* CARD 3: White 500+ Campaigns Executed Card */}
-                    <div className="absolute bottom-12 left-4 bg-white text-[#0A1931] rounded-[32px] p-4 flex items-center gap-4 min-h-[140px]">
+                    <div className="
+    relative
+    sm:absolute sm:bottom-12 sm:left-4
+    md:absolute md:-bottom-12 md:left-0
+    lg:absolute lg:bottom-12 lg:left-4
+    bg-white text-[#0A1931]
+    rounded-[32px]
+    p-4
+    flex items-center gap-4
+    min-h-[140px]
+    w-full sm:w-auto
+">
                         <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
                             <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=200" alt="Team success high five" />
                         </div>
@@ -87,7 +98,18 @@ export default function GrowthNumbersSection() {
                     </div>
 
                     {/* CARD 4: White 32+ Specialists Card */}
-                    <div className="bg-white text-[#0A1931] -ml-8 lg:w-72 rounded-[32px] p-4 flex items-end gap-4 min-h-[140px] relative  sm:col-start-2">
+                    <div className="
+    bg-white text-[#0A1931]
+    ml-0 sm:-ml-8
+    w-full md:w-64 lg:w-72
+    rounded-[32px]
+    p-4 md:absolute lg:relative
+    md:bottom-0 lg:bottom-0
+    flex items-end gap-4
+    min-h-[140px]
+    relative
+    sm:col-start-2
+">
                         <div className=" w-20 h-24 flex-shrink-0 flex items-end justify-center self-end -ml-4 mb-4">
                             <img className="w-full h-auto object-contain  scale-150" src="/RecruitHr2.png" alt="Outbound Growth Specialist" />
                         </div>
@@ -100,7 +122,7 @@ export default function GrowthNumbersSection() {
                 </div>
 
                 {/* RIGHT COLUMN: Section Typography Copy & Call-To-Action */}
-                <div className="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
+                <div className="md:col-span-5 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
 
                     <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-white leading-[1.15]">
                         Numbers that reflect <br />

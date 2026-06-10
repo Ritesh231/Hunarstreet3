@@ -87,7 +87,7 @@ const Rnavbar = ({ setIsDemoOpen, isDemoOpen }) => {
 
                 {/* DESKTOP NAVBAR */}
                 <div className="hidden lg:flex justify-center">
-                    <div className="h-[40px] w-[370px] rounded-full bg-[#041C3E] flex items-center justify-around px-4">
+                    <div className="h-[40px] w-[400px] rounded-full bg-[#041C3E] flex items-center justify-around px-4">
                         {navItems.map((item, index) => (
                             <a
                                 key={index}
