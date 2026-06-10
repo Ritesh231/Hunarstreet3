@@ -14,7 +14,7 @@ import Navbar from '../components/Navbar';
 
 const LeadGeneration = () => {
     const [isDemoOpen, setIsDemoOpen] = useState(false);
-
+    //New
     return (
         <div className="w-full bg-white ">
             <Navbar setIsDemoOpen={setIsDemoOpen} isDemoOpen={isDemoOpen} />
