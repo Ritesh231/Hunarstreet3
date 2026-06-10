@@ -5,28 +5,28 @@ const FAQSection = () => {
     const faqData = [
         {
             id: 1,
-            question: "What exactly does your service include?",
-            answer: "We handle the full outbound process: defining your ideal customer profile, building verified prospect lists, creating outreach content, running campaigns on LinkedIn and/or email, managing and qualifying responses, and reporting on results. You stay involved in approving content and reviewing performance - we handle the execution."
+            question: "Where do you source candidates from?",
+            answer: "We exclusively source candidates through LinkedIn and other professional social media platforms. We don’t rely on traditional job portals - this means we reach active professionals who aren’t on conventional job boards, giving you access to a deeper, more relevant talent pool."
         },
         {
             id: 2,
-            question: "Do you run LinkedIn campaigns, email campaigns, or both?",
-            answer: "We run LinkedIn + email campaigns as a combined offering, which is what most clients choose. Both channels work together - LinkedIn builds familiarity, email deepens the conversation. We can also run either channel independently depending on your target audience and goals."
+            question: "Do you provide staffing or only permanent hiring?",
+            answer: "We specialise exclusively in full-time, permanent hiring. We do not offer contract staffing, temporary placements, or blue-collar recruitment. Our sole focus on permanent roles allows us to deliver higher-quality matches and stronger long-term outcomes for both clients and candidates."
         },
         {
             id: 3,
-            question: "How long does it take to see results?",
-            answer: "Most campaigns start producing initial replies and leads within the first 2-4 weeks. The pace depends on your industry, target audience, and how specific your ICP is. We discuss realistic timelines for your specific situation during onboarding."
+            question: "Do you hire only for Mumbai, or across India?",
+            answer: "We operate PAN India. Whether you’re based in Mumbai, Bengaluru, Delhi, Hyderabad, or any other city, we can manage your hiring requirements across all geographies within the country."
         },
         {
             id: 4,
-            question: "What kind of companies do you work best with?",
-            answer: "We work best with B2B companies that have a clear offering, a defined target market, and a sales team ready to take leads forward. We work with early-stage companies building their first outbound process as well as more established teams looking to scale pipeline."
+            question: "What is your turnaround time (TAT)?",
+            answer: "You will receive the first set of shortlisted profiles within 48–72 hours of mandate confirmation. We prioritise speed without compromising on relevance - every profile is carefully evaluated before it reaches you."
         },
         {
             id: 5,
-            question: "Who writes the outreach content?",
-            answer: "Our content team writes all outreach - LinkedIn messages and email sequences. Content is built around your ICP, your offer, and your brand voice. You review and approve everything before it goes live. Nothing is sent without your sign-off."
+            question: "Who will be our point of contact?",
+            answer: "Every client is assigned a dedicated SPOC (Single Point of Contact) from our team. Your SPOC manages the entire recruitment cycle, ensuring continuity, accountability, and a clear line of communication at all times - no chasing multiple people."
         }
     ];
 

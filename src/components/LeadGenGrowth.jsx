@@ -2,14 +2,14 @@
 
 export default function GrowthNumbersSection() {
     return (
-        <section className="w-full bg-[#031430] text-white py-16 px-4 sm:px-6 lg:px-16 overflow-hidden ">
+        <section className="w-full bg-[#031430] h-full text-white py-16 px-4 sm:px-6 lg:px-16 overflow-hidden ">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 items-center">
 
                 {/* LEFT COLUMN: Grid Layout for Stats Cards */}
-                <div className="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 relative items-start">
+                <div className="md:col-span-7 grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 relative items-start">
 
                     {/* CARD 1: Yellow Trust Card (Spans full width on mobile, left on desktop) */}
-                    <div className="bg-[#FAC207] text-[#0A1931] rounded-[32px] p-6 sm:p-8 flex flex-col justify-between min-h-[220px] sm:col-span-2 md:col-span-1">
+                    <div className="bg-[#FAC207] text-[#0A1931] rounded-[32px] p-5 flex flex-col justify-between min-h-[220px]">
                         {/* Stars & Avatars Row */}
                         <div className="flex items-center justify-between flex-wrap gap-4">
                             {/* 5 Stars */}
@@ -124,18 +124,16 @@ export default function GrowthNumbersSection() {
                 {/* RIGHT COLUMN: Section Typography Copy & Call-To-Action */}
                 <div className="md:col-span-5 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
 
-                    <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-white leading-[1.15]">
+                    <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold tracking-tight text-white leading-[2]">
                         Numbers that reflect <br />
-                        <span className="text-[#FAAF00] font-serif italic font-normal tracking-wide pl-1 relative inline-block mt-1">
+                        <span className="text-[#FAC207] mt-2  font-normal tracking-wide pl-1 relative inline-block mt-1">
                             Real Growth
                             {/* Graphic Underline vector accent stroke loop */}
-                            <svg className="absolute -bottom-2 left-0 w-full h-2 text-[#FAAF00]" viewBox="0 0 100 10" preserveAspectRatio="none">
-                                <path d="M0,5 Q50,10 100,5" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-                            </svg>
+                            <img src="/Rectangle 123.png" className="mt-2 w-full" alt="" />
                         </span>
                     </h2>
 
-                    <p className="text-slate-300 text-sm sm:text-base font-medium leading-relaxed max-w-md">
+                    <p className="text-white text-sm sm:text-sm font-medium leading-relaxed max-w-md">
                         From targeted prospecting to booked meetings, our campaigns are built to deliver measurable business outcomes.
                     </p>
 

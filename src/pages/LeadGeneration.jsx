@@ -16,7 +16,7 @@ const LeadGeneration = () => {
     const [isDemoOpen, setIsDemoOpen] = useState(false);
     //New
     return (
-        <div className="w-full bg-white ">
+        <div className="w-full">
             <Navbar setIsDemoOpen={setIsDemoOpen} isDemoOpen={isDemoOpen} />
             <LeadGenHero />
             <div id="solution">

@@ -1,58 +1,348 @@
 import { useState } from 'react';
-import blurboll from '../assets/RecruitmentPageAssets/Ellipse 36.png'
-import logo from '../assets/RecruitmentPageAssets/img1046 1.png';
-// import hero1 from '../assets/RecruitmentPageAssets/Ellipse 9.png';
-import hero2 from '../assets/hero-right-side.png';
-import hero3 from '../assets/RecruitmentPageAssets/Rectangle 30.png';
-import line from '../assets/Rectangle 124.png';
-import grayback from '../assets/RecruitmentPageAssets/Rectangle 139.png';
-import ses23 from '../assets/RecruitmentPageAssets/Rectangle 3843.png';
-import ses22 from '../assets/RecruitmentPageAssets/Rectangle 3842.png';
-import sound from '../assets/RecruitmentPageAssets/megaphone 4.png';
-import star from '../assets/RecruitmentPageAssets/Star 22.png';
-import icon1 from '../assets/RecruitmentPageAssets/streamline-freehand-color_job-profile-search.png';
-import icon2 from '../assets/RecruitmentPageAssets/streamline-freehand-color_job-search-magnifier-briefcase.png';
-import step1 from '../assets/RecruitmentPageAssets/55a9250c-5cbd-4584-89fc-854978709e64 1.png';
-import step2 from '../assets/RecruitmentPageAssets/4cf62608-1f99-4920-b0af-980c10cdf2b1 1.png';
-import step3 from '../assets/RecruitmentPageAssets/cc0d50cd-51b3-4a16-a257-f47016d1375c 1.png';
-import step4 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 4, 2026, 08_37_18 PM 4.png';
-import vector10 from '../assets/RecruitmentPageAssets/Vector 10.png';
-import vector11 from '../assets/RecruitmentPageAssets/Vector 11.png';
-import vector12 from '../assets/RecruitmentPageAssets/Vector 12.png';
-import logoSvg from '../assets/RecruitmentPageAssets/Logo.svg.png';
-import tech1 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 1.png';
-import tech2 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 2.png';
-import tech3 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 3.png';
-import tech4 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 4.png';
-import tech5 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 5.png';
-import tech6 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 6.png';
-import tech7 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 7.png';
-import tech8 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 8.png';
-import tech9 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 9.png';
-import tech10 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 10.png';
-import tech11 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 11.png';
-import tech12 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 03_26_47 PM 12.png';
+import Navbar from '../components/Navbar.jsx';
 import LeadGenClientTestomonial from '../components/LeadGenClientTestomonial';
 import LeadGenGrowth from '../components/LeadGenGrowth';
 import LeadGenBottomSection from '../components/LeadGenBottomSection';
 import LeadGenFrequentlyaskedQuestions from "../components/LeadGenFrequentlyaskedQuestions";
+import RecruitmentFrequently from "../components/RecruitmentFrequently.jsx";
 import { Link } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+
+const recruitmentAsset = (fileName) => `/assets/RecruitmentPageAssets/${fileName}`;
+
+const blurboll = recruitmentAsset('Ellipse 36.png');
+const logo = recruitmentAsset('img1046 1.png');
+const hero2 = recruitmentAsset('Group 1000001771.jpg');
+const hero3 = recruitmentAsset('Rectangle 30.png');
+const line = '/assets/Rectangle 124.png';
+const grayback = recruitmentAsset('Rectangle 139.png');
+const ses23 = recruitmentAsset('Rectangle 3843.png');
+const ses22 = recruitmentAsset('Rectangle 3842.png');
+const sound = '/assets/megaphone 4.svg';
+const star = recruitmentAsset('Star 22.svg');
+const icon1 = recruitmentAsset('streamline-freehand-color_job-profile-search.png');
+const icon2 = recruitmentAsset('streamline-freehand-color_job-search-magnifier-briefcase.png');
+const step1 = recruitmentAsset('55a9250c-5cbd-4584-89fc-854978709e64 1.png');
+const step2 = recruitmentAsset('4cf62608-1f99-4920-b0af-980c10cdf2b1 1.png');
+const step3 = recruitmentAsset('cc0d50cd-51b3-4a16-a257-f47016d1375c 1.png');
+const step4 = recruitmentAsset('ChatGPT Image Jun 4, 2026, 08_37_18 PM 4.png');
+const vector10 = recruitmentAsset('Vector 10.png');
+const vector11 = recruitmentAsset('Vector 11.png');
+const vector12 = recruitmentAsset('Vector 12.png');
+const logoSvg = recruitmentAsset('Logo.svg.png');
+const tech1 = recruitmentAsset('ChatGPT Image Jun 6, 2026, 03_26_47 PM 1.png');
+const tech2 = recruitmentAsset('ChatGPT Image Jun 6, 2026, 03_26_47 PM 2.png');
+const tech3 = recruitmentAsset('ChatGPT Image Jun 6, 2026, 03_26_47 PM 3.png');
+const tech4 = recruitmentAsset('ChatGPT Image Jun 6, 2026, 03_26_47 PM 4.png');
+const tech5 = recruitmentAsset('ChatGPT Image Jun 6, 2026, 03_26_47 PM 5.png');
+const tech6 = recruitmentAsset('ChatGPT Image Jun 6, 2026, 03_26_47 PM 6.png');
+const tech7 = recruitmentAsset('ChatGPT Image Jun 6, 2026, 03_26_47 PM 7.png');
+const tech8 = recruitmentAsset('ChatGPT Image Jun 6, 2026, 03_26_47 PM 8.png');
+const tech9 = recruitmentAsset('ChatGPT Image Jun 6, 2026, 03_26_47 PM 9.png');
+const tech10 = recruitmentAsset('ChatGPT Image Jun 6, 2026, 03_26_47 PM 10.png');
+const tech11 = recruitmentAsset('ChatGPT Image Jun 6, 2026, 03_26_47 PM 11.png');
+const tech12 = recruitmentAsset('ChatGPT Image Jun 6, 2026, 03_26_47 PM 12.png');
+
 
 const Recruitment = () => {
     const [isDemoOpen, setIsDemoOpen] = useState(false);
+    const [activeTab, setActiveTab] = useState("technical");
+    const [showAll, setShowAll] = useState(false);
 
+    const [selectedRole, setSelectedRole] = useState(
+        "Staff Software Engineer"
+    );
+
+    const logoCards = [
+        { id: 1, gridPos: "col-start-3 row-start-1" },
+        { id: 2, gridPos: "col-start-1 col-span-2 row-start-2 row-span-2 is-large" },
+        { id: 3, gridPos: "col-start-3 row-start-2" },
+        { id: 4, gridPos: "col-start-4 row-start-2" },
+        { id: 5, gridPos: "col-start-5 row-start-2" },
+        { id: 6, gridPos: "col-start-2 row-start-4" },
+        { id: 7, gridPos: "col-start-3 row-start-3" },
+        { id: 8, gridPos: "col-start-4 row-start-3" },
+        { id: 9, gridPos: "col-start-5 row-start-3" },
+        { id: 10, gridPos: "col-start-3 row-start-4" },
+    ];
+    const techRoles = [
+        "Staff Software Engineer",
+        "Machine Learning Engineer",
+        "Data Science Engineer",
+        "DevOps Engineer",
+        "Front-End Developers",
+        "Back-End Developers",
+        "Software Engineers",
+        "App Developers",
+        "ERP Consultants",
+        "CRM Consultants",
+        "Cloud Engineers",
+        "Tech/Server Support",
+        "System Analyst"
+    ];
+
+    const nonTechRoles = [
+        "EV",
+        "Health, Wellness & Fitness",
+        "E-commerce",
+        "Healthcare",
+        "Beauty & Cosmetics",
+        "Fintech",
+        "Capital Markets",
+        "Real Estate",
+        "Ad Tech",
+        "MICE",
+        "Construction",
+        "SCM",
+        "Retail/Apparel & Fashion",
+        "Maritime",
+        "Manufacturing",
+
+    ];
+
+    const techLogos = {
+        "Staff Software Engineer": [tech1, tech2, tech3, tech4, tech5, tech6, tech7, tech8, tech9, tech10, tech11, tech12],
+        "Machine Learning Engineer": [tech5, tech6, tech7, tech8],
+        "Data Science Engineer": [tech9, tech10, tech11, tech12],
+        "DevOps Engineer": [tech1, tech3, tech5, tech7],
+        "Front-End Developers": [tech2, tech4, tech6, tech8],
+        "Back-End Developers": [tech9, tech10, tech11, tech12],
+        "Software Engineers": [tech1, tech2, tech3, tech4],
+        "App Developers": [tech5, tech6, tech7, tech8],
+        "ERP Consultants": [tech9, tech10],
+        "CRM Consultants": [tech11, tech12],
+        "Cloud Engineers": [tech1, tech5, tech9],
+        "Tech/Server Support": [tech2, tech6, tech10],
+        "System Analyst": [tech3, tech7, tech11]
+    };
+
+    const nonTechData = {
+        "EV": [
+            "Lead - EV Charging",
+            "RND Head",
+            "Technical Lead - Power Electronics - EV",
+            "Sales / Business / Key Accounts Manager",
+            "DGM - Lead Digital Twin System Development",
+            "Lead Engineer (L3)",
+            "Electric Vehicle Thermal Management System Engineer",
+            "Vendor Development - Electrical",
+            "Senior Manager Purchase Trims",
+            "Head Product Development & System EV",
+            "AM/DM - Service EV Preparation"
+        ],
+
+        "Health, Wellness & Fitness": [
+            "Spa Manager",
+            "Lead - Workplace Experience",
+            "Partnership Specialist",
+            "Health and Wellness Coach",
+            "Research Manager",
+            "Manager New Product Development",
+            "Head Of Clinical Research",
+            "Medical Affairs Manager",
+            "Associate Venue Partnership",
+            "Sales / Business Development / Key Accounts Manager"
+        ],
+
+        "E-commerce": [
+            "E-commerce Manager",
+            "Marketplace Manager",
+            "Catalog Manager",
+            "Digital Marketing Manager",
+            "Operations Manager",
+            "Supply Chain Manager",
+            "Customer Success Manager",
+            "Business Development Manager",
+            "Category Manager",
+            "Key Accounts Manager"
+        ],
+
+        "Healthcare": [
+            "Hospital Administrator",
+            "Clinical Operations Manager",
+            "Medical Affairs Manager",
+            "Healthcare Consultant",
+            "Patient Relationship Manager",
+            "Research Manager",
+            "Medical Officer",
+            "Healthcare Operations Lead",
+            "Business Development Manager",
+            "Key Accounts Manager"
+        ],
+
+
+        "Beauty & Cosmetics": [
+            "Brand Manager",
+            "Product Development Manager",
+            "Beauty Consultant",
+            "Retail Operations Manager",
+            "Marketing Manager",
+            "Sales Manager",
+            "Category Manager",
+            "Customer Experience Manager",
+            "Business Development Manager",
+            "Key Accounts Manager"
+        ],
+
+        "Fintech": [
+            "Product Manager",
+            "Business Analyst",
+            "Risk Analyst",
+            "Investment Advisor",
+            "Relationship Manager",
+            "Operations Manager",
+            "Growth Manager",
+            "Compliance Manager",
+            "Business Development Manager",
+            "Key Accounts Manager"
+        ],
+
+        "Capital Markets": [
+            "Wealth Manager",
+            "Deputy Manager - Fund Manager",
+            "Sales / Business Development / Key Accounts Manager",
+            "Startup Fund Raising Manager",
+            "Senior Equity Research Analyst",
+            "Mutual Fund Analyst",
+            "Investment Advisor",
+            "Head - Corporate Leasing",
+            "Manager Investment Banking",
+            "Client Relationship Manager",
+            "Investor Relations Analyst"
+        ],
+
+        "Real Estate": [
+            "Legal Head - Real Estate",
+            "Assistant Manager - Sales - Real Estate",
+            "Customer Relationship Management Specialist",
+            "Real Estate Consultant",
+            "Real Estate Project Finance Advisor",
+            "Senior Real Estate Analyst",
+            "Relationship Manager - Commercial Leasing",
+            "Senior Survey Manager",
+            "Accounts Manager - Real Estate",
+            "Head - Corporate Leasing",
+            "Sales / Business Development / Key Accounts Manager"
+        ],
+
+        "Ad Tech": [
+            "Google Ads Specialist",
+            "Search Engine Optimization Manager",
+            "Performance Marketing Manager",
+            "Sales / Business Development / Key Accounts Manager",
+            "Advertising Copywriter",
+            "Advertising Copyeditor",
+            "Influencer Marketing Manager",
+            "Social Media Marketing Manager",
+            "Ad Film Maker",
+            "Video Editor",
+            "Public Relations"
+        ],
+
+        "MICE": [
+            "Corporate Sales Specialist - MICE & Events",
+            "Online Hotel Relations Manager",
+            "Sales / Business Development / Key Accounts Manager",
+            "Senior Manager - MICE Operations"
+        ],
+
+        "Construction": [
+            "Construction Manager",
+            "Civil Project Architect",
+            "Township / Civil Construction Engineer",
+            "Sales / Business Development / Key Accounts Manager",
+            "Senior Planning Engineer",
+            "Interior Designer",
+            "Piping Engineer",
+            "Senior Civil Engineer",
+            "Solar Construction Manager",
+            "CAD Engineer",
+            "Electrical Engineer",
+            "Tunnel Construction Engineer",
+            "Warehouse Manager",
+            "Environmental Engineer",
+            "Finishing Manager - Infrastructure"
+        ],
+
+        "SCM": [
+            "Manager - SCM",
+            "Sales / Business Development / Key Accounts Manager",
+            "SCM & Export Logistics Manager",
+            "Warehouse Manager",
+            "Material Management Engineer",
+            "Inventory Manager",
+            "Demand Forecasting Manager",
+            "Purchasing Manager",
+            "Distribution Manager",
+            "Supply Chain Analyst / Specialist",
+            "Order To Cash (OTC) Specialist"
+        ],
+
+        "Retail/Apparel & Fashion": [
+            "Store Merchandiser",
+            "Marketing Merchandising Manager",
+            "Senior Fashion Consultant",
+            "Customer Experience Manager",
+            "Store Manager",
+            "Regional Sourcing Manager",
+            "Sales / Business Development / Key Accounts Manager",
+            "Operations Manager",
+            "Business Manager",
+            "Lead Experience Stores",
+            "Floor Manager",
+            "Visual Merchandiser"
+        ],
+
+        "Maritime": [
+            "Marine Superintendent",
+            "Marine Officer",
+            "Sales / Business Development / Key Accounts Manager",
+            "Naval Architect",
+            "Senior Naval Officer",
+            "Ocean Engineer",
+            "Marine Technician",
+            "Fleet Manager"
+        ],
+
+        "Manufacturing": [
+            "Automation Manager",
+            "Plant Manager",
+            "Process Engineer",
+            "Manufacturing Operations Lead",
+            "Plant Maintenance Engineer",
+            "Sales / Business Development / Key Accounts Manager",
+            "Production Manager",
+            "Production Planning & Control",
+            "Plant Operations Engineer",
+            "Quality Control Engineer",
+            "Business Process Re-Engineering Expert",
+            "Safety Engineer"
+        ]
+    };
+    const currentRoles =
+        activeTab === "technical"
+            ? techRoles
+            : nonTechRoles;
+
+    const visibleRoles = showAll
+        ? currentRoles
+        : currentRoles.slice(0, 5);
     return (
         <div className='relative w-full min-h-screen overflow-hidden '>
             <Navbar setIsDemoOpen={setIsDemoOpen} isDemoOpen={isDemoOpen} />
 
-            <section id="home" className="min-h-screen grid grid-cols-1 text-center -mt-8  lg:grid-cols-5 lg:text-left items-center justify-items-center px-8  lg:gap-8  w-full">
+            <img src={blurboll} alt="BlurOval" className='absolute -bottom-32 -left-32 w-96 h-96 object-cover' />
+            <img src={logo} alt="Logo" className='hidden lg:block absolute top-[31px] left-8 w-16 h-16 ' />
+            <button
+                type="button"
+                onClick={() => setIsDemoOpen(true)}
+                className="font-messiri absolute hidden lg:block top-[31px]  z-[9999]  right-8 z-20 inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#FAC207] px-4 py-2 text-base font-semibold text-[#041C3E] shadow-[0_0_25px_rgba(250,194,7,0.55)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#041C3E] hover:text-white lg:px-5 lg:py-3"
+            >
+                {/* <i className="ri-calendar-2-line text-lg"></i> */}
+                Schedule Demo
+            </button>
+            <section id="home" className="min-h-screen grid grid-cols-1 text-center  lg:grid-cols-5 lg:text-left items-center justify-items-center px-12  lg:gap-8   w-full">
 
-                <div className='col-span-3 lg:hidden mt-24'>
 
-                    <img src={hero2} alt="Section Image" className='w-full h-full object-contain' />
-
-                </div>
                 <div className='col-span-2  grid items-center justify-items-center lg:items-start lg:justify-items-start gap-4'>
 
                     <p className='  text-center mt-20 font-jakarta font-semibold text-lg text-[#041C3E] bg-[#90BEFF82] p-2 rounded-lg'>Industry-Specific Hiring Experts</p>
@@ -73,14 +363,14 @@ const Recruitment = () => {
                     </div>
 
                 </div>
-                <div className='col-span-3 hidden lg:block'>
+                <div className='col-span-3 mt-5 '>
 
                     <img src={hero2} alt="Section Image" className='w-full h-full object-contain' />
 
                 </div>
             </section>
 
-            <section id="about" className='grid min-h-screen grid-cols-1 lg:grid-cols-2 px-8 lg:px-16 gap-8 py-24 w-full items-center relative overflow-hidden'
+            <section id="about" className='grid min-h-screen grid-cols-1 lg:grid-cols-2 px-8 lg:px-16 gap-8 py-12 w-full items-center relative overflow-hidden'
                 style={{ backgroundImage: `url(${grayback})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className='relative w-full h-[400px] md:h-[480px] flex items-center justify-center mt-12 lg:mt-0'>
                     {/* Megaphone top-left */}
@@ -405,10 +695,10 @@ const Recruitment = () => {
                 </div>
             </section>
 
-            {/* Industries We Service & Trusted By Leading Company */}
-            <section id="industries" className="w-full bg-[#041C3E] py-24   flex flex-col items-center rounded-t-[40px] md:rounded-t-[80px] z-20 relative overflow-hidden">
+            {/* Industries vice & Trusted By Leading Company */}
+            <section id="industries" className="w-full bg-[#031430]  pt-16 flex flex-col items-center rounded-t-[40px] md:rounded-t-[80px] z-20 relative px-12 overflow-hidden">
                 {/* Part 1: Industries We Service */}
-                <div className="flex flex-col items-center text-center w-full mb-32">
+                <div className="flex flex-col items-center text-center w-full mb-24">
                     <h2 className="text-4xl  lg:text-[44px] font-jakarta font-semibold text-white mb-6">
                         Industries We <span className="text-[#FAC207] font-messiri lg:text-5xl relative inline-block">
                             Service
@@ -455,73 +745,115 @@ const Recruitment = () => {
                 </div>
 
                 {/* Part 2: Trusted By Leading Company */}
-                <div className="w-full -ml-36 max-w-[1000px] flex flex-col lg:flex-row  justify-between   pb-12">
-                    {/* Left Text Side */}
-                    <div className="max-w-2xl text-left w-full relative z-10 flex flex-col items-center xl:items-start text-center xl:text-left">
-                        <div className="inline-block bg-[#4A6799] text-white font-bold text-sm px-6 py-3 rounded-lg mb-8 uppercase tracking-wider shadow-sm">
+
+
+            </section>
+            <section className="w-full bg-[#031430] text-white py-16 px-6 sm:px-12 lg:px-20 relative overflow-hidden select-none">
+
+
+
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+                    {/* =========================================================
+            LEFT COLUMN: TEXT CONTENT & MARKETING BRANDING
+            ========================================================= */}
+                    <div className="lg:col-span-5 space-y-6 relative z-10 text-left">
+
+                        {/* Section Tag */}
+                        <div className="inline-block bg-[#2D436B] border border-blue-400/20 text-[#A5C2F4] text-xs font-bold tracking-wider uppercase px-4 py-2 rounded-lg shadow-sm">
                             Our Clients
                         </div>
-                        {/* the sound icon floating */}
-                        <div className="relative w-full flex justify-center xl:justify-end">
-                            <img src={sound} className="w-20 md:w-28 absolute -top-24 xl:-top-20 right-0 xl:right-16 transform -rotate-12 z-0 opacity-90" alt="megaphone" />
+
+                        {/* Heading Container with Floating Megaphone Vector */}
+                        <div className="relative pt-4">
+                            {/* Absolute Megaphone Illustration position */}
+                            <div className="absolute top-[-60px] right-12 sm:right-32 lg:right-0 w-24 h-24 text-[#FFC700]  ">
+                                <img src="/megaphone.svg" alt="" />
+                            </div>
+
+                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white">
+                                Trusted By Leading <br />
+                                <span className="text-[#FFC700] relative inline-block mt-1">
+                                    Company
+                                    {/* Underline Flourish Curve effect */}
+
+                                    <img
+                                        src="/Rectangle 123.png"
+                                        alt=""
+                                        className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-48 sm:w-48"
+                                    />
+                                </span>
+                            </h2>
                         </div>
 
-                        <h2 className="text-4xl  lg:text-[44px] font-jakarta font-semibold text-white leading-tight relative z-10">
-                            Trusted By Leading<br className="hidden xl:block" />
-                            <span className="text-[#FAC207] lg:text-5xl font-messiri relative inline-block mt-3 xl:mt-2">
-                                Company
-                                <img src={line} alt="underline" className="absolute -bottom-3 left-0 w-full object-contain" />
-                            </span>
-                        </h2>
-                        <p className="text-white/90 text-base md:text-lg lg:text-xl font-jakarta mt-8 mb-12 relative z-10 max-w-lg">
+                        {/* Context Description paragraph */}
+                        <p className="text-sm sm:text-base text-slate-300 font-medium leading-relaxed max-w-md pt-2">
                             We've partnered with growing businesses, and established organizations to help them find the right talent and achieve their hiring goals.
                         </p>
-                        <button className="bg-[#FAC207] text-[#041C3E] font-bold font-jakarta px-8 py-4 rounded-[14px] shadow-[0_0_30px_rgba(250,194,7,0.4)] hover:scale-105 transition-transform flex items-center justify-center gap-2 relative z-10 text-lg w-full sm:w-auto">
-                            Join Us Now <i className="ri-arrow-right-line"></i>
-                        </button>
+
+                        {/* CTA Action Trigger */}
+                        <div className="pt-4">
+                            <button className="bg-[#FFC700] hover:bg-[#E6B400] text-[#031430] font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-yellow-500/10 flex items-center space-x-2 group transition-all duration-200 active:scale-95">
+                                <span>Join Us Now</span>
+                                <span className="transform group-hover:translate-x-1 transition-transform font-bold">→</span>
+                            </button>
+                        </div>
+
                     </div>
 
-                    {/* Right Logos Side */}
-                    <div className="relative w-full max-w-[600px] h-[580px] flex items-center justify-center scale-75 sm:scale-90 lg:scale-100 xl:scale-90 2xl:scale-100 origin-top xl:origin-right mt-10 xl:mt-0">
+                    {/* =========================================================
+            RIGHT COLUMN: BENTO LAYOUT LOGO GRID
+            ========================================================= */}
+                    <div className="lg:col-span-7 w-full flex justify-center items-center">
 
-                        {/* Big Box */}
-                        <div className="absolute top-[160px] left-0 w-[260px] h-[260px] bg-white rounded-[48px] shadow-2xl flex items-center justify-center p-8 hover:-translate-y-2 transition-transform duration-300">
-                            <img src={logoSvg} className="w-[70%] object-contain" alt="Google" />
+                        {/* Desktop/Tablet CSS Grid Container */}
+                        <div className="hidden sm:grid grid-cols-5 grid-rows-4 gap-4 w-full max-w-[580px] p-2 aspect-[4/3] items-center justify-items-center">
+                            {logoCards.map((card) => {
+                                const isLarge = card.gridPos.includes('is-large');
+                                return (
+                                    <div
+                                        key={card.id}
+                                        className={`
+                    ${card.gridPos.replace('is-large', '')} 
+                    bg-white rounded-3xl flex items-center justify-center -mt-8 p-4 shadow-xl border border-white/20 transition-transform duration-300 hover:scale-105 select-none
+                    ${isLarge ? 'w-full h-full max-h-[220px]' : 'w-full aspect-square max-w-[100px] sm:max-w-[110px]'}
+                  `}
+                                    >
+                                        {/* Google Logo Placeholder matches the look */}
+                                        <div className={`flex items-center font-semibold tracking-tight ${isLarge ? 'text-3xl lg:text-4xl' : 'text-sm sm:text-base'}`}>
+                                            <span className="text-[#4285F4]">G</span>
+                                            <span className="text-[#EA4335]">o</span>
+                                            <span className="text-[#FBBC05]">o</span>
+                                            <span className="text-[#4285F4]">g</span>
+                                            <span className="text-[#34A853]">l</span>
+                                            <span className="text-[#EA4335]">e</span>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
 
-                        {/* Col 2 */}
-                        <div className="absolute top-[20px] left-[280px] w-[120px] h-[120px] bg-white rounded-[32px] shadow-xl flex items-center justify-center p-4 hover:-translate-y-2 transition-transform duration-300">
-                            <img src={logoSvg} className="w-[70%] object-contain" alt="Google" />
-                        </div>
-                        <div className="absolute top-[160px] left-[280px] w-[120px] h-[120px] bg-white rounded-[32px] shadow-xl flex items-center justify-center p-4 hover:-translate-y-2 transition-transform duration-300">
-                            <img src={logoSvg} className="w-[70%] object-contain" alt="Google" />
-                        </div>
-                        <div className="absolute top-[300px] left-[280px] w-[120px] h-[120px] bg-white rounded-[32px] shadow-xl flex items-center justify-center p-4 hover:-translate-y-2 transition-transform duration-300">
-                            <img src={logoSvg} className="w-[70%] object-contain" alt="Google" />
-                        </div>
-                        <div className="absolute top-[440px] left-[280px] w-[120px] h-[120px] bg-white rounded-[32px] shadow-xl flex items-center justify-center p-4 hover:-translate-y-2 transition-transform duration-300">
-                            <img src={logoSvg} className="w-[70%] object-contain" alt="Google" />
-                        </div>
-
-                        {/* Col 3 */}
-                        <div className="absolute top-[160px] left-[420px] w-[120px] h-[120px] bg-white rounded-[32px] shadow-xl flex items-center justify-center p-4 hover:-translate-y-2 transition-transform duration-300">
-                            <img src={logoSvg} className="w-[70%] object-contain" alt="Google" />
-                        </div>
-                        <div className="absolute top-[300px] left-[420px] w-[120px] h-[120px] bg-white rounded-[32px] shadow-xl flex items-center justify-center p-4 hover:-translate-y-2 transition-transform duration-300">
-                            <img src={logoSvg} className="w-[70%] object-contain" alt="Google" />
-                        </div>
-                        <div className="absolute top-[440px] left-[420px] w-[120px] h-[120px] bg-white rounded-[32px] shadow-xl flex items-center justify-center p-4 hover:-translate-y-2 transition-transform duration-300">
-                            <img src={logoSvg} className="w-[70%] object-contain" alt="Google" />
+                        {/* Mobile Clean Fluid Wrapping Grid Alternative */}
+                        <div className="grid sm:hidden grid-cols-3 gap-3 w-full">
+                            {[...Array(9)].map((_, i) => (
+                                <div
+                                    key={i}
+                                    className="bg-white rounded-xl aspect-square p-2 flex items-center justify-center shadow-sm"
+                                >
+                                    <div className="text-xs font-semibold tracking-tight">
+                                        <span className="text-[#4285F4]">G</span>
+                                        <span className="text-[#EA4335]">o</span>
+                                        <span className="text-[#FBBC05]">o</span>
+                                        <span className="text-[#4285F4]">g</span>
+                                        <span className="text-[#34A853]">l</span>
+                                        <span className="text-[#EA4335]">e</span>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
 
-                        {/* Col 4 */}
-                        <div className="absolute top-[160px] left-[560px] w-[120px] h-[120px] bg-white rounded-[32px] shadow-xl flex items-center justify-center p-4 hover:-translate-y-2 transition-transform duration-300">
-                            <img src={logoSvg} className="w-[70%] object-contain" alt="Google" />
-                        </div>
-                        <div className="absolute top-[300px] left-[560px] w-[120px] h-[120px] bg-white rounded-[32px] shadow-xl flex items-center justify-center p-4 hover:-translate-y-2 transition-transform duration-300">
-                            <img src={logoSvg} className="w-[70%] object-contain" alt="Google" />
-                        </div>
                     </div>
+
                 </div>
             </section>
             <section className="relative w-full py-24 px-6 lg:px-16 xl:px-24 flex flex-col  items-center bg-gradient-to-br from-[#FFFCF6] to-[#FFF6E0] z-10">
@@ -542,59 +874,154 @@ const Recruitment = () => {
 
                     {/* Tabs */}
                     <div className="flex flex-wrap items-center justify-center gap-4">
-                        <button className="bg-[#041C3E] text-[#FAC207] font-bold font-jakarta px-8 py-4 rounded-2xl shadow-lg hover:-translate-y-1 transition-transform">
+                        <button
+                            onClick={() => {
+                                setActiveTab("technical");
+                                setShowAll(false);
+                                setSelectedRole("Staff Software Engineer");
+                            }}
+                            className={`font-bold px-8 py-4 rounded-2xl ${activeTab === "technical"
+                                ? "bg-[#041C3E] text-[#FAC207]"
+                                : "bg-[#E2EFFF] text-[#8BA4C8]"
+                                }`}
+                        >
                             Technical
                         </button>
-                        <Link to="https://www.hunarstreet.com/#expertise" className="bg-[#E2EFFF] text-[#8BA4C8] font-bold font-jakarta px-8 py-4 rounded-2xl shadow-sm hover:-translate-y-1 transition-transform">
-                            Non - Technical
-                        </Link>
+
+                        <button
+                            onClick={() => {
+                                setActiveTab("nontechnical");
+                                setShowAll(false);
+                                setSelectedRole("EV");
+                            }}
+                            className={`font-bold px-8 py-4 rounded-2xl ${activeTab === "nontechnical"
+                                ? "bg-[#041C3E] text-[#FAC207]"
+                                : "bg-[#E2EFFF] text-[#8BA4C8]"
+                                }`}
+                        >
+                            Non Technical
+                        </button>
                     </div>
                 </div>
 
                 {/* Split Content Area */}
-                <div className="w-full max-w-[1400px] flex flex-col lg:flex-row gap-8 lg:gap-12 mt-8">
+                <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 w-full">
 
-                    {/* Left Column: Roles List */}
-                    <div className="w-full lg:w-[420px] bg-[#C6DDFB] rounded-[40px] p-6 sm:p-8 flex flex-col gap-4 shadow-xl shrink-0">
-                        {/* Active Role */}
-                        <div className="bg-[#041C3E] text-white rounded-[20px] px-6 py-5 flex items-center justify-between shadow-lg cursor-pointer hover:-translate-y-1 transition-transform">
-                            <span className="font-jakarta font-semibold text-[17px]">Staff Software Engineer</span>
-                            <i className="ri-play-fill text-white  text-2xl"></i>
+                    {/* Left Panel */}
+                    <div className="w-full">
+                        <div className="bg-[#C6DDFB] rounded-3xl p-4 lg:p-6 shadow-xl">
+
+                            <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2">
+
+                                {visibleRoles.map((role, idx) => (
+                                    <button
+                                        key={idx}
+                                        onClick={() => setSelectedRole(role)}
+                                        className={`
+              shrink-0
+              lg:w-full
+              px-5 py-4
+              rounded-2xl
+              flex items-center justify-between
+              transition-all duration-300
+              ${selectedRole === role
+                                                ? "bg-[#041C3E] text-white shadow-lg"
+                                                : "bg-white text-[#041C3E] hover:shadow-md"
+                                            }
+            `}
+                                    >
+                                        <span className="font-semibold whitespace-nowrap">
+                                            {role}
+                                        </span>
+
+                                        <i
+                                            className={`ri-play-fill text-xl ${selectedRole === role
+                                                ? "text-white"
+                                                : "text-[#FAC207]"
+                                                }`}
+                                        />
+                                    </button>
+                                ))}
+
+                                <button
+                                    onClick={() => setShowAll(!showAll)}
+                                    className="shrink-0 lg:w-full bg-[#AECDF6] rounded-2xl px-5 py-4 font-semibold text-[#041C3E]"
+                                >
+                                    {showAll ? "Less Roles" : "View All Roles"}
+                                </button>
+
+                            </div>
+
                         </div>
-                        <Link to="https://www.hunarstreet.com/#expertise" className="bg-white   rounded-[20px] px-6 py-5 flex items-center justify-between shadow-lg cursor-pointer hover:-translate-y-1 transition-transform">
-                            <span className="font-jakarta font-semibold text-[#041C3E] text-[17px]">Machine Learning Engineer</span>
-                            <i className="ri-play-fill text-[#FAC207] text-2xl"></i>
-                        </Link>
-
-                        {/* Inactive Roles */}
-                        {['Data Science Engineer', 'DevOps Engineer', 'Front-End Developers', 'Back-End Developers'].map((role, idx) => (
-                            <Link key={idx} className="bg-white text-[#041C3E] rounded-[20px] px-6 py-5 flex items-center justify-between shadow-sm cursor-pointer hover:-translate-y-1 transition-transform">
-                                <span className="font-jakarta font-semibold text-[17px]">{role}</span>
-                                <i className="ri-play-fill text-[#FAC207] text-2xl"></i>
-                            </Link>
-                        ))}
-
-                        {/* View All Button */}
-                        <button className="mt-4 w-full bg-[#AECDF6] bg-opacity-60 text-[#041C3E] rounded-[20px] px-6 py-5 font-jakarta font-bold text-lg hover:bg-opacity-100 transition-colors flex items-center justify-center gap-2">
-                            View All Tech Roles <i className="ri-arrow-right-line"></i>
-                        </button>
                     </div>
 
-                    {/* Right Column: Tech Stack Grid */}
-                    <div className="w-full flex-grow bg-white border-4 border-[#F2F7FF] rounded-[40px] p-6 sm:p-8 md:p-12 shadow-2xl flex items-center justify-center">
-                        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
-                            {[tech1, tech2, tech3, tech4, tech5, tech6, tech7, tech8, tech9, tech10, tech11, tech12].map((tech, idx) => (
-                                <div key={idx} className="bg-[#FFF8E5] rounded-[28px] aspect-[5/4] flex flex-col items-center justify-center p-6 hover:-translate-y-2 transition-transform duration-300 shadow-sm hover:shadow-lg cursor-pointer group">
-                                    <img src={tech} alt={`Technology ${idx + 1}`} className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300" />
-                                </div>
-                            ))}
-                        </div>
+                    {/* Right Panel */}
+                    <div className="w-full bg-white border border-[#EEF4FF] rounded-3xl p-4 md:p-6 lg:p-8 shadow-xl">
+
+                        {activeTab === "technical" ? (
+                            <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-4 gap-4">
+
+                                {(techLogos[selectedRole] || []).map((logo, idx) => (
+                                    <div
+                                        key={idx}
+                                        className="
+              bg-[#FFF8E5]
+              rounded-3xl
+              aspect-square
+              flex
+              items-center
+              justify-center
+              p-4
+              hover:-translate-y-1
+              transition-all
+              shadow-sm
+            "
+                                    >
+                                        <img
+                                            src={logo}
+                                            alt={`logo-${idx}`}
+                                            className="w-50 h-50 object-contain"
+                                        />
+                                    </div>
+                                ))}
+
+                            </div>
+                        ) : (
+                            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+
+                                {(nonTechData[selectedRole] || []).map((role, idx) => (
+                                    <div
+                                        key={idx}
+                                        className="
+              bg-[#FFF8E5]
+              rounded-2xl
+              p-5
+              min-h-[120px]
+              flex
+              items-center
+              justify-center
+              text-center
+              hover:-translate-y-1
+              hover:shadow-lg
+              transition-all
+            "
+                                    >
+                                        <h3 className="font-semibold text-[#041C3E]">
+                                            {role}
+                                        </h3>
+                                    </div>
+                                ))}
+
+                            </div>
+                        )}
+
                     </div>
+
                 </div>
 
             </section>
             <LeadGenClientTestomonial />
-            <LeadGenFrequentlyaskedQuestions />
+            <RecruitmentFrequently />
             <LeadGenBottomSection />
         </div>
     );

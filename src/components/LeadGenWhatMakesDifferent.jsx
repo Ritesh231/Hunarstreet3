@@ -12,7 +12,7 @@ const WhatMakesUsDifferent = () => {
                 <div className="lg:col-span-5 flex justify-center items-center w-full aspect-square max-w-[450px] mx-auto lg:mx-0 relative">
 
                     {/* Main Image Placeholder */}
-                    <div className="w-[95%] h-[85%]  rounded-full flex items-center justify-center ">
+                    <div className="w-[150%] h-[105%]  rounded-full flex items-center justify-center ">
                         <img src="/MakesDifferent.png" alt="" />
 
                     </div>
@@ -25,7 +25,7 @@ const WhatMakesUsDifferent = () => {
 
                     {/* Top Tag */}
                     <div>
-                        <span className="inline-block bg-[#DCE7FF] text-[#1E3A8A] text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded-md shadow-sm">
+                        <span className="inline-block bg-[#DCE7FF] text-[#1E3A8A] text-xs font-semibold tracking-wider uppercase px-3 py-1.5 rounded-md shadow-sm">
                             What Makes Us Different ?
                         </span>
                     </div>
@@ -34,12 +34,10 @@ const WhatMakesUsDifferent = () => {
                     <div className="relative inline-block">
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0B1B3D] tracking-tight">
                             What Makes Us <span className="text-[#FFBF00] relative inline-block">Different ?
-                                {/* Curved underline flourish */}
-                                <span className="absolute left-0 bottom-[-6px] w-full h-[4px] bg-[#FFBF00] rounded-full opacity-80 hidden sm:block" />
+                                <img src="/Rectangle 123.png" alt="" />
                             </span>
                         </h2>
-                        {/* Blue line under "What Makes Us" */}
-                        <div className="w-40 h-[3px] bg-blue-600 mt-2 rounded-full" />
+
                     </div>
 
                     {/* Cards Container */}

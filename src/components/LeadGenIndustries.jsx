@@ -95,11 +95,39 @@ const IndustriesAndGrowthHub = () => {
           ========================================================= */}
             <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center mt-20 px-4 sm:px-6 lg:px-8">
 
-                {/* Dynamic Wrapper: Grid layout on mobile/tablet, Absolute layout on desktop */}
-                <div className="relative w-full flex flex-col items-center lg:block lg:h-[500px]">
+                {/* ── MOBILE LAYOUT: card overlaid on center of chart ── */}
+                <div className="relative w-full lg:hidden flex items-center justify-center">
 
-                    {/* CENTER CARD (The Growth Package Hub) */}
-                    <div className="w-full max-w-[300px] text-black rounded-3xl p-6 flex flex-col items-center text-center z-30 relative lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 mb-10 lg:mb-0">
+                    {/* RecruChart as the base */}
+                    <img src="/RecruChart.svg" alt="" className="w-full max-w-[400px]" />
+
+                    {/* CENTER CARD — absolutely centered over the SVG */}
+                    <div className="absolute text-xs top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[170px] text-black rounded-2xl p-4 flex flex-col items-center text-center z-10">
+                        {/* Gold Coin Icon */}
+                        <div className="w-10 h-10 bg-gradient-to-b from-amber-300 to-amber-500 rounded-full flex items-center justify-center shadow-md mb-2 border border-amber-200">
+                            <span className="text-white font-black text-base select-none">$</span>
+                        </div>
+
+                        <h4 className="text-xs font-semibold text-[#051126] tracking-tight leading-tight">
+                            Custom growth
+                        </h4>
+                        <span className="text-xs font-bold text-[#FFB800] mt-0.5 tracking-wide">
+                            Package
+                        </span>
+
+                        {/* CTA Button */}
+                        <button className="mt-3 w-20 bg-[#FAC207] text-[#051126] font-semibold text-[4px]  rounded-lg flex items-center justify-center space-x-1 shadow-md active:scale-95 transition-all duration-200">
+                            <span>Get Custom Quote</span>
+                            <span className="font-bold">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                {/* ── DESKTOP LAYOUT: overlapping absolute layout ── */}
+                <div className="hidden lg:block relative w-full h-[500px]">
+
+                    {/* CENTER CARD */}
+                    <div className="w-full max-w-[300px] text-black rounded-3xl p-6 flex flex-col items-center text-center z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                         {/* Gold Coin Icon */}
                         <div className="w-12 h-12 bg-gradient-to-b from-amber-300 to-amber-500 rounded-full flex items-center justify-center shadow-md mb-3 border border-amber-200">
                             <span className="text-white font-black text-xl select-none">$</span>
@@ -119,8 +147,7 @@ const IndustriesAndGrowthHub = () => {
                         </button>
                     </div>
 
-                    <img src="/RecruChart.svg" className='hidden lg:block -mt-12' alt="" />
-
+                    <img src="/RecruChart.svg" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full" alt="" />
                 </div>
             </div>
 

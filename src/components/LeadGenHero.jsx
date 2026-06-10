@@ -1,6 +1,20 @@
-
+import { useState } from "react";
+import Schedule from "../components/Schedule";
 
 export default function HeroSection() {
+    const [openSchedule, setOpenSchedule] = useState(false);
+
+    const scrollToHowItWorks = () => {
+        const section = document.getElementById("howitworks");
+
+        if (section) {
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    };
+
     return (
         <section className="relative w-full overflow-hidden py-8 px-4 sm:px-6 lg:px-6 bg-white lg:py-4">
             {/* Left Yellow Background Patch - Kept for Desktop */}
@@ -18,18 +32,20 @@ export default function HeroSection() {
 
                     {/* Main Typography Header */}
                     <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[34px] xl:text-[38px] font-semibold text-[#0A2540] leading-snug lg:leading-[1.5] tracking-normal">
-                        Build a Predictable <span className="text-[#F4B400]">B2B</span>
+                        Build a Predictable <span className="text-[#F4B400]">B2B</span> Pipeline
+
+                        <br className="block lg:hidden" />
+
+                        Without Hiring an Entire
+
                         <br className="hidden lg:block" />
-                        <span className="inline lg:whitespace-nowrap"> Pipeline Without </span>
-                        <br className="md:hidden" />
-                        <span className="inline lg:whitespace-nowrap">Hiring an Entire</span>
 
                         {/* Inline Badged Text */}
                         <span className="relative inline-flex items-center gap-2 mt-2 lg:mt-0 vertical-mid align-middle">
                             <span className="inline-flex items-center -space-x-2  p-0.5 md:p-1 rounded-full shadow-sm h-7 w-14 md:h-20 md:w-36">
                                 <img className="rounded-full object-cover w-full h-full" src="/HunarRecruit2.png" alt="Team member" />
                             </span>
-                            <span className="text-[#FAAF00] el-messiri italic font-normal tracking-wide text-3xl sm:text-5xl md:text-6xl lg:text-[56px] pl-1 relative whitespace-nowrap">
+                            <span className="text-[#FAAF00] el-messiri font-normal tracking-wide text-3xl sm:text-5xl md:text-6xl lg:text-[56px] pl-1 relative whitespace-nowrap">
                                 Sales Team
                                 {/* Handcrafted gold underline curve */}
                                 <svg className="absolute -bottom-1.5 left-0 w-full h-2 text-[#FAAF00]" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -40,12 +56,13 @@ export default function HeroSection() {
                     </h1>
 
                     {/* Action Buttons */}
-                    <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2 md:pt-4">
-                        <button className="w-full sm:w-auto bg-[#FAC207] hover:bg-[#E09E00] text-[#0A2540] font-bold px-8 py-3.5 rounded-md shadow-[0_0_25px_rgba(250,194,7,0.6)] hover:shadow-[0_0_35px_rgba(250,194,7,0.8)] transition-all duration-300 text-sm md:text-base flex items-center justify-center gap-2 group">
-                            Book Free Session
-                            <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+                    <div className="flex flex-row items-center justify-center lg:justify-start gap-3 pt-2 md:pt-4">
+                        <button
+                            onClick={() => setOpenSchedule(true)} className="w-1/2 sm:w-auto el-messiri bg-[#FAC207] hover:bg-[#E09E00] text-[#0A2540] font-bold px-4 lg:px-8 py-3.5 rounded-md shadow-[0_0_25px_rgba(250,194,7,0.6)] hover:shadow-[0_0_35px_rgba(250,194,7,0.8)] transition-all duration-300 text-xs sm:text-sm md:text-base flex items-center justify-center gap-2 group">
+                            Book Free Session →
                         </button>
-                        <button className="w-full sm:w-auto hover:bg-gray-50 text-[#0A2540] font-semibold px-8 py-3.5 rounded-md border border-gray-300 shadow-sm transition-all duration-200 text-sm md:text-base flex items-center justify-center gap-2">
+
+                        <button onClick={scrollToHowItWorks} className="w-1/2 sm:w-auto el-messiri hover:bg-gray-50 text-[#0A2540] font-semibold px-4 lg:px-8 py-3.5 rounded-md border border-gray-300 shadow-sm transition-all duration-200 text-xs sm:text-sm md:text-base flex items-center justify-center gap-2">
                             See How It Works →
                         </button>
                     </div>
@@ -84,9 +101,9 @@ export default function HeroSection() {
                     </div>
 
                     {/* Central Image Layer */}
-                    <div className="w-full max-w-[340px] sm:max-w-[500px] lg:max-w-[1100px] px-2 mb-6 lg:mb-2 lg:-mt-24 relative z-10 flex justify-center">
+                    <div className="w-full max-w-[340px] sm:max-w-[500px] lg:max-w-[1100px] px-2 mb-6 lg:mb-2 lg:-mt-40 lg:mr-14 relative z-0 flex justify-center">
                         <img
-                            className="w-full h-auto object-contain select-none filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.04)]"
+                            className="w-[130%] lg:w-[180%] max-w-none h-[550px] object-contain select-none"
                             src="/HunarRecruit1.png"
                             alt="B2B Campaign Experts"
                             draggable="false"
@@ -94,10 +111,10 @@ export default function HeroSection() {
                     </div>
 
                     {/* On Desktop: Absolute overlapping position. On Mobile: Flat grid flexbox below the illustration */}
-                    <div className="w-full mt-2 lg:mt-[-10px] relative z-30 px-2 flex flex-col sm:flex-row items-center justify-center gap-4 lg:block lg:max-w-[490px]">
+                    <div className="w-full -mt-24 lg:mt-[-10px] relative z-30 px-2 flex flex-col sm:flex-row items-center justify-center gap-4 lg:block lg:max-w-[490px]">
 
                         {/* Left Floating Metric Card */}
-                        <div className="w-full sm:w-[180px] lg:absolute lg:left-[-100px] lg:top-[100%] lg:-translate-y-1/2 lg:z-30 lg:w-[180px]">
+                        <div className="w-full sm:w-[180px] lg:absolute lg:left-[-100px] lg:-top-24  lg:z-30 lg:w-[180px]">
                             <div className="bg-white rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.08)] border border-gray-100 p-4">
                                 <div className="text-2xl font-semibold text-[#0A2540] tracking-tight">
                                     500+
@@ -110,15 +127,15 @@ export default function HeroSection() {
                                         }}
                                     />
                                 </div>
-                                <div className="text-[10px] font-bold text-gray-400 mt-2 tracking-wider uppercase leading-snug">
+                                <div className="text-[10px] text-black font-semibold mt-2 tracking-wider uppercase leading-snug">
                                     Campaigns Executed
                                 </div>
                             </div>
                         </div>
 
                         {/* Brand Statement Summary Card */}
-                        <div className="w-full sm:flex-1 lg:absolute lg:right-0 lg:right-[-50px] lg:-top-[50%] lg:-translate-y-1/2 lg:z-30 lg:w-[80%] bg-[#FAC207] text-[#0A2540] rounded-2xl p-4 sm:p-5 shadow-[0_15px_35px_rgba(250,175,0,0.28)] flex items-center border border-amber-400">
-                            <p className="text-[11px] sm:text-xs md:text-[13px] leading-relaxed tracking-wide text-center sm:text-left lg:whitespace-nowrap">
+                        <div className="w-full sm:flex-1 lg:absolute lg:right-0 lg:right-[-50px] lg:-top-[30%] lg:-translate-y-1/2 lg:z-30 lg:w-[80%] bg-[#FAC207] text-[#0A2540] rounded-2xl p-4 sm:p-5 shadow-[0_15px_35px_rgba(250,175,0,0.28)] flex items-center border border-amber-400">
+                            <p className="text-[11px] text-[#041C3E] sm:text-xs md:text-[13px] leading-relaxed tracking-wide text-center sm:text-left lg:whitespace-nowrap">
                                 HunarStreet Technologies helps B2B companies<br className="hidden lg:inline" /> connect with their ideal clients through targeted<br className="hidden lg:inline" /> LinkedIn and email campaigns run by a dedicated team.
                             </p>
                         </div>
@@ -128,6 +145,12 @@ export default function HeroSection() {
                 </div>
 
             </div>
+            {openSchedule && (
+                <Schedule
+                    isDemoOpen={openSchedule}
+                    setIsDemoOpen={setOpenSchedule}
+                />
+            )}
         </section>
     );
 }

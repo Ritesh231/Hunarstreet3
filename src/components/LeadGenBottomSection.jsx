@@ -28,17 +28,13 @@ const OfficeAndFooter = () => {
                 </p>
 
                 {/* Video Wrapper Box */}
-                <div className="relative w-full max-w-5xl mx-auto aspect-[16/9] bg-slate-900/60 rounded-[32px] border border-slate-700/40 shadow-2xl p-2 group">
+                <div className="relative w-full max-w-6xl h-[400px] mx-auto  rounded-[32px]   p-2 group">
                     <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-32 h-32 bg-[#F9B700] rounded-full -z-10 hidden md:block" />
                     <div className="absolute -right-16 -top-8 w-48 h-48 bg-[#F9B700] rounded-full -z-10 hidden md:block" />
 
-                    <div className="w-full h-full rounded-[24px] bg-black/40 border border-white/5 flex items-center justify-center relative overflow-hidden">
+                    <div className="w-full h-full rounded-[24px] bg-black/40 flex items-center justify-center relative overflow-hidden">
                         <img src="/Rectangle 3857.png" alt="" className='w-full h-full object-cover' />
-                        <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 cursor-pointer shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-6 h-6 text-white ml-1 fill-current" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z" />
-                            </svg>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -47,8 +43,17 @@ const OfficeAndFooter = () => {
             2. CTA LAYER CONTAINER ("Let's Talk About Your Pipeline?")
             ========================================================= */}
             <div className="w-full px-4 -mt-36 sm:px-6 lg:px-8 relative z-20 translate-y-[100px]">
-                <div className="max-w-4xl mx-auto bg-[#FFC700] text-[#031430] rounded-[36px] p-8 sm:p-12 text-center shadow-[0_0_40px_rgba(144,190,255,0.5),0_20px_60px_rgba(144,190,255,0.35)] relative overflow-hidden">
-                    <div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(#031430_1.5px,transparent_1.5px)] [background-size:16px_16px] pointer-events-none" />
+                <div
+                    className="max-w-5xl mx-auto text-[#031430] rounded-[36px] p-8 sm:p-12 text-center relative overflow-visible
+   "
+                    style={{
+                        backgroundImage: "url('/Rectangle 117.png')",
+                        backgroundSize: "100% 130%",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                    }}
+                >
+
 
                     <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-[#031430] mb-4">
                         Let's Talk About Your <br className="sm:hidden" /> Pipeline?
@@ -67,7 +72,15 @@ const OfficeAndFooter = () => {
             {/* =========================================================
             3. FOOTER FRAME SECTION (White Fluid Bottom Backdrop)
             ========================================================= */}
-            <footer className="w-full bg-white text-[#0A1A3A] pt-36 pb-6 px-4 sm:px-6 lg:px-8 rounded-t-[40px] sm:rounded-t-[60px] relative z-10 shadow-[0_-20px_40px_rgba(0,0,0,0.02)]">
+            <footer
+                className="w-full text-[#0A1A3A] pt-36 pb-6 px-4 sm:px-6 lg:px-8 rounded-t-[40px] sm:rounded-t-[60px] relative z-10 overflow-hidden"
+                style={{
+                    backgroundImage: "url('/Rectangle 118.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                }}
+            >
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#0A1A3A_1px,transparent_1px)] [background-size:14px_14px] rounded-t-[60px]" />
 
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-6 pb-12 border-b border-slate-200 relative z-10 text-left">

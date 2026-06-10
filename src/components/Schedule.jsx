@@ -40,7 +40,7 @@ const Schedule = ({ isDemoOpen, setIsDemoOpen }) => {
 
                                 <div className="flex items-center gap-4">
                                     <i className="ri-mail-fill text-xl text-[#FAC207]"></i>
-                                    <span>contact@hunarstreet.com</span>
+                                    <span>ayushi@hunarstreet.com</span>
                                 </div>
 
                                 <div className="flex items-start gap-4">
@@ -48,10 +48,10 @@ const Schedule = ({ isDemoOpen, setIsDemoOpen }) => {
 
                                     <span className="leading-relaxed">
                                         B-1403, Arihant Aura, plot no. 13/1, TTC Industrial Area, Thane Belapur Road, Turbhe
+
+                                        Navi Mumbai-
                                         <br />
-                                        Navi Mumbai,
-                                        <br />
-                                        Maharashtra
+                                        400705
                                     </span>
                                 </div>
 

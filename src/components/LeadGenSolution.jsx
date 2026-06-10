@@ -24,7 +24,7 @@ export default function OutboundGrowthSection() {
                 <div className="lg:col-span-4 flex justify-center lg:justify-start relative">
 
                     {/* Subtle Golden Background Circle Accent */}
-                    <div className="absolute -top-6 -right-2 w-48 h-48 rounded-full bg-[#FAC20720] -z-10 flex items-center justify-center">
+                    <div className="absolute -top-6 right-10 w-40 h-40 rounded-full bg-[#FAC20720] border-2 border-[#FAC207]/30 -z-10 flex items-center justify-center">
                         <div className="w-28 h-28 rounded-full bg-[#FAC20729]/20" />
                     </div>
 
@@ -38,7 +38,7 @@ export default function OutboundGrowthSection() {
                     </div>
 
                     {/* Dark Blue Decorative Starburst/Badge Shape Bottom Left */}
-                    <div className="absolute -bottom-6 left-6 text-[#0A2540] ">
+                    <div className="absolute -bottom-12 left-6 text-[#0A2540] ">
                         <img src="/Star 1.png" alt="" />
                     </div>
                 </div>
@@ -52,10 +52,10 @@ export default function OutboundGrowthSection() {
                     </span>
 
                     {/* Header Typography */}
-                    <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0A2540] leading-[1.5] tracking-normal">
+                    <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-semibold text-[#0A2540] leading-[2]">
                         Your Dedicated <br />
 
-                        <span className="whitespace-nowrap">
+                        <span className="whitespace-nowrap mt-4">
                             Outbound{" "}
                             <span className="relative  inline-block text-[#FAC207]">
                                 Growth Team
@@ -69,7 +69,7 @@ export default function OutboundGrowthSection() {
                         </span>
                     </h2>
 
-                    <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed max-w-md pt-2">
+                    <p className="text-black text-sm md:text-base font-medium leading-relaxed max-w-md pt-2">
                         Instead of hiring and managing a<br></br> Business Development team, get an<br></br>experienced outbound engine built for<br></br> predictable pipeline growth.
                     </p>
 
@@ -85,7 +85,7 @@ export default function OutboundGrowthSection() {
 
                     {/* Headline Callout: "What will include?" */}
                     <div className="absolute top-0 right-4 lg:right-12 flex flex-col items-end">
-                        <h3 className="text-xl sm:text-2xl font-serif italic font-bold text-[#0A2540] tracking-wide">
+                        <h3 className="text-xl sm:text-2xl el-messiri font-bold text-[#0A2540] tracking-wide">
                             What will include ?
                         </h3>
                         {/* Hand-drawn decorative arrow pointing down */}

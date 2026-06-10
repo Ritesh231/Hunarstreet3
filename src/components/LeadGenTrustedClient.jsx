@@ -104,17 +104,18 @@ const TrustedClients = () => {
 
                     {/* Mobile Clean Fluid Wrapping Grid Alternative */}
                     <div className="grid sm:hidden grid-cols-3 gap-3 w-full">
-                        {/* Main Featured Big Card element */}
-                        <div className="col-span-3 bg-white rounded-2xl py-8 px-4 flex items-center justify-center shadow-md">
-                            <div className="text-3xl font-semibold tracking-tight">
-                                <span className="text-[#4285F4]">G</span><span className="text-[#EA4335]">o</span><span className="text-[#FBBC05]">o</span><span className="text-[#4285F4]">g</span><span className="text-[#34A853]">l</span><span className="text-[#EA4335]">e</span>
-                            </div>
-                        </div>
-                        {/* Secondary companion layout elements */}
-                        {[...Array(8)].map((_, i) => (
-                            <div key={i} className="bg-white rounded-xl aspect-square p-2 flex items-center justify-center shadow-sm">
+                        {[...Array(9)].map((_, i) => (
+                            <div
+                                key={i}
+                                className="bg-white rounded-xl aspect-square p-2 flex items-center justify-center shadow-sm"
+                            >
                                 <div className="text-xs font-semibold tracking-tight">
-                                    <span className="text-[#4285F4]">G</span><span className="text-[#EA4335]">o</span><span className="text-[#FBBC05]">o</span><span className="text-[#4285F4]">g</span><span className="text-[#34A853]">l</span><span className="text-[#EA4335]">e</span>
+                                    <span className="text-[#4285F4]">G</span>
+                                    <span className="text-[#EA4335]">o</span>
+                                    <span className="text-[#FBBC05]">o</span>
+                                    <span className="text-[#4285F4]">g</span>
+                                    <span className="text-[#34A853]">l</span>
+                                    <span className="text-[#EA4335]">e</span>
                                 </div>
                             </div>
                         ))}

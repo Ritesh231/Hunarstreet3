@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 export default function StrategyChannelsSection() {
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(null);
     const features = [
         {
             text: "ICP-based prospect list building using LinkedIn Sales Navigator and verified CRM tools",
@@ -27,18 +27,18 @@ export default function StrategyChannelsSection() {
         <section className="w-full bg-gradient-to-b from-[#F0F6FE] to-white text-[#0A2540] py-16 px-4 sm:px-6 lg:px-16 relative overflow-hidden">
 
             {/* Decorative Floating Megaphones (Left & Right top corners) */}
-            <div className="absolute top-10 left-4 sm:left-12 lg:left-24 opacity-80 animate-bounce hidden sm:block" style={{ animationDuration: '6s' }}>
-                <img src="/megaphone.svg" alt="Megaphone" className="w-24 h-24" />
+            <div className="absolute top-10 left-4 sm:left-12 lg:left-36 opacity-80 animate-bounce hidden sm:block" style={{ animationDuration: '6s' }}>
+                <img src="/megaphone.svg" alt="Megaphone" className="w-28 h-28" />
             </div>
 
             <div
-                className="absolute top-10 right-4 sm:right-12 lg:right-24 opacity-80 animate-bounce hidden sm:block"
+                className="absolute top-10 right-4 sm:right-12 lg:right-36 opacity-80 animate-bounce hidden sm:block"
                 style={{ animationDuration: '5s' }}
             >
                 <img
                     src="/megaphone.svg"
                     alt="Megaphone"
-                    className="-scale-x-100  w-24 h-24"
+                    className="-scale-x-100  w-28 h-28"
                 />
             </div>
 
@@ -50,7 +50,7 @@ export default function StrategyChannelsSection() {
                 </span>
 
                 {/* Header Typography */}
-                <h2 className="text-2xl sm:text-4xl lg:text-[40px] font-extrabold text-center tracking-tight text-[#0A2540] leading-tight max-w-2xl">
+                <h2 className="text-2xl sm:text-4xl lg:text-[40px] font-semibold text-center tracking-tight text-[#0A2540] leading-tight max-w-2xl">
                     One Strategy. Two Powerful <br className="hidden sm:inline" />
                     <span className="text-[#FAC207] el-messiri relative inline-block mt-4 sm:mt-4">
                         Channels
@@ -68,7 +68,7 @@ export default function StrategyChannelsSection() {
                 </h2>
 
                 {/* Context Subheading */}
-                <p className="text-gray-600 text-center text-xs sm:text-sm font-semibold max-w-2xl leading-relaxed mt-6 mb-12 px-2">
+                <p className="text-black text-center text-xs sm:text-sm  max-w-2xl leading-relaxed mt-6 mb-12 px-2">
                     We combine LinkedIn outreach and email campaigns into a single coordinated growth system designed to generate qualified conversations and predictable pipeline growth.
                 </p>
 
@@ -79,16 +79,16 @@ export default function StrategyChannelsSection() {
                             key={index}
                             onClick={() => setActiveIndex(index)}
                             className={`cursor-pointer flex items-start gap-4 p-5 sm:p-6 rounded-2xl transition-all duration-300 border transform hover:-translate-y-1
-        ${activeIndex === index
+${activeIndex === index
                                     ? 'bg-[#FAC207] text-[#0A2540] border-[#FAC207] shadow-lg'
-                                    : 'bg-white text-[#0A2540] border-[#FAC2075E] shadow-[0_8px_25px_rgba(0,0,0,0.03)] hover:shadow-md'
+                                    : 'bg-white text-[#0A2540] border-[#FAC2075E] shadow-[0_8px_25px_rgba(0,0,0,0.03)] hover:bg-[#FAC207] hover:text-[#0A2540] hover:border-[#FAC207] hover:shadow-lg'
                                 }`}
                         >
                             <div
-                                className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center flex-shrink-0 border mt-0.5
-            ${activeIndex === index
+                                className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center flex-shrink-0 border mt-0.5 transition-all duration-300
+    ${activeIndex === index
                                         ? 'border-[#0A2540]'
-                                        : 'border-gray-300'
+                                        : 'border-gray-300 group-hover:border-[#0A2540]'
                                     }`}
                             >
                                 <svg
