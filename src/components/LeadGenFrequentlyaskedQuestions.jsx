@@ -30,7 +30,6 @@ const FAQSection = () => {
         }
     ];
 
-    // Track the currently open accordion panel ID
     const [openIndex, setOpenIndex] = useState(1);
 
     const toggleFAQ = (id) => {
@@ -38,18 +37,20 @@ const FAQSection = () => {
     };
 
     return (
-        <section className="w-full bg-[#031430] py-16 px-4 sm:px-6 lg:px-12 flex items-center justify-center select-none">
+        // Section IS the white background — full width, no outer padding, no card
+        <section className="w-full bg-gradient-to-br from-white via-white to-[#FFFDEE] text-[#051126] py-16 select-none relative overflow-hidden rounded-t-[60px] lg:rounded-t-[100px]">
 
-            {/* Main Container: Replicates the white card frame with yellow gradient glow corners */}
-            <div className="max-w-6xl w-full bg-gradient-to-br from-white via-white to-[#FFFDEE] text-[#051126] rounded-[40px] shadow-2xl p-8 sm:p-12 lg:p-16 relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center">
+            {/* Decorative blobs */}
+            <img src="/Ellipse 25.svg" className="absolute -top-20 left-0 w-160 h-160 pointer-events-none" alt="" />
+            <img src="/Ellipse 26.png" className="absolute right-0 top-0 w-160 h-160 pointer-events-none" alt="" />
 
-                <img src="/Ellipse 25.svg" className='absolute -top-20 left-0 w-160 h-160 ' alt="" />
-                <img src="/Ellipse 26.png" className='absolute right-0 w-160 h-160 ' alt="" />
+            {/* Inner content — constrained & centered */}
+            <div className="max-w-7xl mx-auto w-full px-6 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center relative z-10">
 
                 {/* =========================================================
-            LEFT COLUMN: SECTION HEADINGS & CALL TO ACTION
-            ========================================================= */}
-                <div className="lg:col-span-5 flex flex-col justify-center items-start text-left relative z-10 space-y-5">
+                LEFT COLUMN: SECTION HEADINGS & CALL TO ACTION
+                ========================================================= */}
+                <div className="lg:col-span-5 flex flex-col justify-center items-start text-left space-y-5">
 
                     <div className="space-y-2">
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-[#0B1B3D]">
@@ -57,7 +58,6 @@ const FAQSection = () => {
                         </h2>
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#FFBF00] relative inline-block">
                             Questions
-
                         </h2>
                     </div>
 
@@ -72,8 +72,8 @@ const FAQSection = () => {
                             <span className="transform group-hover:translate-x-1 transition-transform font-bold">→</span>
                         </button>
 
-                        {/* Curled Yellow Arrow Accent Line Asset */}
-                        <div className="absolute bottom-[-65px] left-[150px] w-48 h-20 text-[#FFBF00]/80 hidden md:block select-none opacity-80 animate-pulse">
+                        {/* Curled Yellow Arrow Accent */}
+                        <div className="absolute bottom-[-65px] left-[150px] w-48 h-20 hidden md:block select-none opacity-80 animate-pulse">
                             <img src="/Arrow 15.svg" alt="" />
                         </div>
                     </div>
@@ -81,23 +81,23 @@ const FAQSection = () => {
                 </div>
 
                 {/* =========================================================
-            RIGHT COLUMN: INTERACTIVE ACCORDION PANELS
-            ========================================================= */}
-                <div className="lg:col-span-7 space-y-3.5 w-full relative z-10">
+                RIGHT COLUMN: INTERACTIVE ACCORDION PANELS
+                ========================================================= */}
+                <div className="lg:col-span-7 space-y-3.5 w-full">
                     {faqData.map((faq) => {
                         const isOpen = openIndex === faq.id;
                         return (
                             <div
                                 key={faq.id}
                                 className={`
-                  w-full rounded-2xl border transition-all duration-300 overflow-hidden
-                  ${isOpen
+                                    w-full rounded-2xl border transition-all duration-300 overflow-hidden
+                                    ${isOpen
                                         ? 'bg-[#EBF2FF] border-[#C3D9FF] shadow-sm'
                                         : 'bg-[#EBF2FF]/60 hover:bg-[#EBF2FF] border-transparent'
                                     }
-                `}
+                                `}
                             >
-                                {/* Accordion Toggle Header Trigger Area */}
+                                {/* Accordion Toggle Header */}
                                 <button
                                     onClick={() => toggleFAQ(faq.id)}
                                     className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-bold text-xs sm:text-[14px] text-[#0B1B3D] tracking-tight focus:outline-none transition-colors duration-150 group"
@@ -106,25 +106,25 @@ const FAQSection = () => {
                                         {faq.question}
                                     </span>
 
-                                    {/* Circle Dropdown Button Arrow */}
+                                    {/* Circle Arrow Icon */}
                                     <div className={`
-                    w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 border
-                    ${isOpen
+                                        w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 border
+                                        ${isOpen
                                             ? 'bg-[#031430] text-white border-transparent rotate-180'
                                             : 'bg-[#031430] text-white border-transparent'
                                         }
-                  `}>
+                                    `}>
                                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                                         </svg>
                                     </div>
                                 </button>
 
-                                {/* Collapsible Content Area */}
+                                {/* Collapsible Answer */}
                                 <div className={`
-                  transition-all duration-300 ease-in-out font-medium text-slate-600 overflow-hidden
-                  ${isOpen ? 'max-h-[200px] opacity-100 border-t border-[#D3E4FF]/60' : 'max-h-0 opacity-0'}
-                `}>
+                                    transition-all duration-300 ease-in-out font-medium text-slate-600 overflow-hidden
+                                    ${isOpen ? 'max-h-[200px] opacity-100 border-t border-[#D3E4FF]/60' : 'max-h-0 opacity-0'}
+                                `}>
                                     <p className="p-4 sm:p-5 text-xs sm:text-[13px] leading-relaxed bg-white/40">
                                         {faq.answer}
                                     </p>

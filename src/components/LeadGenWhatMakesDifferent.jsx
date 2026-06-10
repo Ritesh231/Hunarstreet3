@@ -10,8 +10,6 @@ const WhatMakesUsDifferent = () => {
 
                 {/* Left Side: Dummy Image Space */}
                 <div className="lg:col-span-5 flex justify-center items-center w-full aspect-square max-w-[450px] mx-auto lg:mx-0 relative">
-                    {/* Circular/Dotted Frame Accent to mimic design */}
-                    <div className="absolute inset-0 border-2 border-dashed border-slate-300 rounded-full animate-[spin_100s_linear_infinite] p-4 hidden sm:block"></div>
 
                     {/* Main Image Placeholder */}
                     <div className="w-[95%] h-[85%]  rounded-full flex items-center justify-center ">

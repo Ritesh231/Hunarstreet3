@@ -12,9 +12,9 @@ const OfficeAndFooter = () => {
             {/* =========================================================
             1. VIDEO CONTAINER SECTION ("A Walk Through Our Office")
             ========================================================= */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 text-center relative z-10">
+            <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 text-center relative z-10">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-3 text-white">
-                    A Walk Through Our <span className="text-[#FFBF00] relative inline-block leading-none">
+                    A Walk Through Our <span className="text-[#FFBF00] el-messiri relative inline-block leading-none">
                         Office
                         <img
                             src="/Rectangle 123.png"
@@ -28,9 +28,9 @@ const OfficeAndFooter = () => {
                 </p>
 
                 {/* Video Wrapper Box */}
-                <div className="relative w-full max-w-4xl mx-auto aspect-[16/9] bg-slate-900/60 rounded-[32px] border border-slate-700/40 shadow-2xl p-2 group">
-                    <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-16 h-16 bg-[#FFBF00] rounded-full -z-10 hidden md:block" />
-                    <div className="absolute -right-8 -top-6 w-24 h-24 bg-[#FFBF00] rounded-full -z-10 hidden md:block" />
+                <div className="relative w-full max-w-5xl mx-auto aspect-[16/9] bg-slate-900/60 rounded-[32px] border border-slate-700/40 shadow-2xl p-2 group">
+                    <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-32 h-32 bg-[#F9B700] rounded-full -z-10 hidden md:block" />
+                    <div className="absolute -right-16 -top-8 w-48 h-48 bg-[#F9B700] rounded-full -z-10 hidden md:block" />
 
                     <div className="w-full h-full rounded-[24px] bg-black/40 border border-white/5 flex items-center justify-center relative overflow-hidden">
                         <img src="/Rectangle 3857.png" alt="" className='w-full h-full object-cover' />

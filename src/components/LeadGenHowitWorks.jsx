@@ -74,7 +74,7 @@ export default function HowItWorksTimeline() {
             {/* Main Section Header */}
             <div className="text-center max-w-2xl mx-auto mb-16 lg:mb-24">
                 <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-                    How It <span className="text-[#FAC207]">Works ?</span>
+                    How It <span className="text-[#FAC207] el-messiri">Works ?</span>
                 </h2>
                 <p className="text-gray-500 text-xs sm:text-sm font-medium tracking-wide mt-3">
                     From understanding to booked meetings, here's what the process involves
@@ -130,7 +130,7 @@ export default function HowItWorksTimeline() {
                                         <div className="w-52 h-52 bg-[#FAAF00]/15 rounded-full blur-3xl" />
                                     </div>
 
-                                    <div className="aspect-[16/10] bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-3 shadow-[0_15px_40px_rgba(0,0,0,0.04)] border border-gray-100/80 hover:shadow-xl transition-shadow duration-300 relative z-10">
+                                    <div className=" p-3 relative z-10">
                                         <img
                                             className="w-full h-full object-cover rounded-2xl"
                                             src={step.image}

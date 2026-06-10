@@ -39,7 +39,7 @@ export default function GrowthNumbersSection() {
 
                             {/* Outer decorative arc */}
                             <svg
-                                className="absolute inset-0 w-full h-full rotate-90"
+                                className="absolute inset-0 w-full h-full rotate-45"
                                 viewBox="0 0 120 120"
                             >
                                 <circle
@@ -58,11 +58,11 @@ export default function GrowthNumbersSection() {
                             <div className="w-24 h-24  flex items-center justify-center relative">
 
                                 {/* Gold Dot */}
-                                <div className="absolute top-10 -right-1 w-3 h-3 bg-[#FAAF00] rounded-full" />
+                                <div className="absolute top-2 right-2 w-3 h-3 bg-[#FAAF00] rounded-full" />
 
                                 {/* Inner Blue Circle */}
                                 <div className="w-[78px] h-[78px] rounded-full bg-[#041C3E] flex items-center justify-center">
-                                    <span className="text-[#FAAF00] font-bold text-3xl">
+                                    <span className="text-[#FAC207] font-bold text-3xl">
                                         30%
                                     </span>
                                 </div>
@@ -92,7 +92,7 @@ export default function GrowthNumbersSection() {
                             <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=200" alt="Team success high five" />
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-2xl sm:text-3xl font-black tracking-tight text-[#FAAF00]">500+</span>
+                            <span className="text-2xl sm:text-3xl font-black tracking-tight text-[#FAC207]">500+</span>
                             <span className="text-xs sm:text-sm font-bold text-slate-700 leading-tight mt-0.5">Campaigns<br></br> Executed</span>
                         </div>
                     </div>
@@ -114,7 +114,7 @@ export default function GrowthNumbersSection() {
                             <img className="w-full h-auto object-contain  scale-150" src="/RecruitHr2.png" alt="Outbound Growth Specialist" />
                         </div>
                         <div className="flex flex-col z-10 ml-4">
-                            <span className="text-2xl sm:text-3xl font-black tracking-tight text-[#FAAF00]">32+</span>
+                            <span className="text-2xl sm:text-3xl font-black tracking-tight text-[#FAC207]">32+</span>
                             <span className="text-xs sm:text-sm font-bold text-slate-700 leading-tight mt-0.5">Outbound Growth<br></br>Specialists</span>
                         </div>
                     </div>

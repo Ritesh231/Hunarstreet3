@@ -16,7 +16,8 @@ section {
     scroll-margin-top: 100px;
 }
 
-/* Apply El Messiri to text with specific golden/yellow colors */
+/* 
+
 .text-\[\#FAC207\],
 .text-\[\#FAAF00\],
 .text-\[\#FFC600\],
@@ -32,4 +33,26 @@ section {
 [style*="color: #FFC600"],
 [style*="color:#FFC600"] {
     font-family: "El Messiri", sans-serif !important;
+} */
+.el-messiri {
+    font-family: "El Messiri", sans-serif !important;
+}
+
+/* ── Infinite Marquee ── */
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-track {
+    animation: marquee-scroll 28s linear infinite;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
 }

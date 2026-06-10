@@ -2,7 +2,7 @@
 
 export default function HeroSection() {
     return (
-        <section className="relative w-full overflow-hidden py-8 px-4 sm:px-6 lg:px-16 bg-white lg:py-4">
+        <section className="relative w-full overflow-hidden py-8 px-4 sm:px-6 lg:px-6 bg-white lg:py-4">
             {/* Left Yellow Background Patch - Kept for Desktop */}
             <div className="absolute left-0 top-[180px] w-[420px] h-[520px] bg-gradient-to-r from-[#FAC2076E]/30 to-[#FAC2076E]/10 rounded-r-[120px] blur-[20px] z-0 hidden lg:block" />
 
@@ -17,7 +17,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Main Typography Header */}
-                    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[34px] xl:text-[38px] font-semibold text-[#0A2540] leading-snug lg:leading-[1.8] tracking-normal">
+                    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[34px] xl:text-[38px] font-semibold text-[#0A2540] leading-snug lg:leading-[1.5] tracking-normal">
                         Build a Predictable <span className="text-[#F4B400]">B2B</span>
                         <br className="hidden lg:block" />
                         <span className="inline lg:whitespace-nowrap"> Pipeline Without </span>
@@ -29,7 +29,7 @@ export default function HeroSection() {
                             <span className="inline-flex items-center -space-x-2  p-0.5 md:p-1 rounded-full shadow-sm h-7 w-14 md:h-20 md:w-36">
                                 <img className="rounded-full object-cover w-full h-full" src="/HunarRecruit2.png" alt="Team member" />
                             </span>
-                            <span className="text-[#FAAF00] font-serif italic font-normal tracking-wide text-3xl sm:text-5xl md:text-6xl lg:text-[56px] pl-1 relative whitespace-nowrap">
+                            <span className="text-[#FAAF00] el-messiri italic font-normal tracking-wide text-3xl sm:text-5xl md:text-6xl lg:text-[56px] pl-1 relative whitespace-nowrap">
                                 Sales Team
                                 {/* Handcrafted gold underline curve */}
                                 <svg className="absolute -bottom-1.5 left-0 w-full h-2 text-[#FAAF00]" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -84,7 +84,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Central Image Layer */}
-                    <div className="w-full max-w-[340px] sm:max-w-[500px] lg:max-w-[700px] px-2 mb-6 lg:mb-2 lg:-mt-24 relative z-10 flex justify-center">
+                    <div className="w-full max-w-[340px] sm:max-w-[500px] lg:max-w-[1100px] px-2 mb-6 lg:mb-2 lg:-mt-24 relative z-10 flex justify-center">
                         <img
                             className="w-full h-auto object-contain select-none filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.04)]"
                             src="/HunarRecruit1.png"
@@ -93,7 +93,6 @@ export default function HeroSection() {
                         />
                     </div>
 
-                    {/* Responsive Bottom Cards Container */}
                     {/* On Desktop: Absolute overlapping position. On Mobile: Flat grid flexbox below the illustration */}
                     <div className="w-full mt-2 lg:mt-[-10px] relative z-30 px-2 flex flex-col sm:flex-row items-center justify-center gap-4 lg:block lg:max-w-[490px]">
 

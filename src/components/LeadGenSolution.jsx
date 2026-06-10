@@ -3,10 +3,13 @@
 export default function OutboundGrowthSection() {
     const features = [
         { text: "ICP Definition & Strategy", positioning: "lg:top-[38%] lg:-right-[18%]" },
-        { text: "LinkedIn Outreach", positioning: "lg:top-[48%] lg:-left-[16%]" },
+        {
+            text: <>LinkedIn<br />Outreach</>,
+            positioning: "lg:top-[48%] lg:-left-[16%]"
+        },
         { text: "Lead Qualification", positioning: "lg:bottom-[22%] lg:-left-[30%]" },
         { text: "Response Management", positioning: "lg:bottom-[8%] lg:-left-[5%]" },
-        { text: "Prospect Research", positioning: "lg:bottom-[15%] lg:right-[2%]" }
+        { text: "Prospect Research", positioning: "lg:bottom-[10%] lg:right-[-20%]" }
     ];
 
     return (
@@ -35,13 +38,13 @@ export default function OutboundGrowthSection() {
                     </div>
 
                     {/* Dark Blue Decorative Starburst/Badge Shape Bottom Left */}
-                    <div className="absolute -bottom-6 left-6 text-[#0A2540] animate-spin" style={{ animationDuration: '20s' }}>
+                    <div className="absolute -bottom-6 left-6 text-[#0A2540] ">
                         <img src="/Star 1.png" alt="" />
                     </div>
                 </div>
 
                 {/* CENTER COLUMN: Text Content & Copy */}
-                <div className="lg:col-span-4 text-center lg:text-left flex flex-col items-center lg:items-start space-y-5">
+                <div className="lg:col-span-4 -mt-24 -ml-12 text-center lg:text-left flex flex-col items-center lg:items-start space-y-5">
 
                     {/* Solution Tag */}
                     <span className="bg-[#D2E3FC] text-[#1A73E8] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-md">
@@ -49,29 +52,29 @@ export default function OutboundGrowthSection() {
                     </span>
 
                     {/* Header Typography */}
-                    <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0A2540] leading-[1.15] tracking-tight">
+                    <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0A2540] leading-[1.5] tracking-normal">
                         Your Dedicated <br />
 
                         <span className="whitespace-nowrap">
                             Outbound{" "}
-                            <span className="relative inline-block text-[#FAAF00]">
+                            <span className="relative  inline-block text-[#FAC207]">
                                 Growth Team
 
                                 <img
                                     src="/Rectangle 123.png"
                                     alt=""
-                                    className="absolute left-0 -bottom-2 w-full"
+                                    className="absolute left-0 -bottom-4 w-full "
                                 />
                             </span>
                         </span>
                     </h2>
 
                     <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed max-w-md pt-2">
-                        Instead of hiring and managing a Business Development team, get an experienced outbound engine built for predictable pipeline growth.
+                        Instead of hiring and managing a<br></br> Business Development team, get an<br></br>experienced outbound engine built for<br></br> predictable pipeline growth.
                     </p>
 
                     {/* CTA Button */}
-                    <button className="bg-[#FAAF00] hover:bg-[#E09E00] text-[#0A2540] font-bold px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 text-sm flex items-center gap-2 group mt-2">
+                    <button className="bg-[#FAC207] hover:bg-[#E09E00] text-[#0A2540] font-bold px-8 py-3.5 rounded-lg shadow-[0_0_25px_rgba(250,194,7,0.75)] hover:shadow-[0_0_40px_rgba(250,194,7,0.55)] transition-all duration-200 text-sm flex items-center gap-2 group mt-2">
                         Enquire Now
                         <span className="transform group-hover:translate-x-1 transition-transform">→</span>
                     </button>

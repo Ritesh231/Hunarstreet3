@@ -1,11 +1,40 @@
 import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Schedule from './Schedule';
 
 
-const Navbar = () => {
+const Navbar = ({ isDemoOpen: propIsDemoOpen, setIsDemoOpen: propSetIsDemoOpen }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isDemoOpen, setIsDemoOpen] = useState(false);
+    const [internalIsDemoOpen, setInternalIsDemoOpen] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
 
+    const isDemoOpen = propIsDemoOpen !== undefined ? propIsDemoOpen : internalIsDemoOpen;
+    const setIsDemoOpen = propSetIsDemoOpen !== undefined ? propSetIsDemoOpen : setInternalIsDemoOpen;
+
+    const path = location.pathname;
+
+    const navConfigs = {
+        '/': [
+            { label: 'Home', type: 'scroll', target: '/' },
+            { label: 'Recruitment', type: 'link', target: '/recruitment' },
+            { label: 'Lead Generation', type: 'link', target: '/lead-generation' },
+        ],
+        '/recruitment': [
+            { label: 'Home', type: 'scroll', target: '/' },
+            { label: 'About', type: 'scroll', target: 'about' },
+            { label: 'Positions', type: 'scroll', target: 'positions' },
+            { label: 'Industries', type: 'scroll', target: 'industries' },
+        ],
+        '/lead-generation': [
+            { label: 'Home', type: 'scroll', target: '/' },
+            { label: 'Solution', type: 'scroll', target: 'solution' },
+            { label: 'Services', type: 'scroll', target: 'whatwedo' },
+            { label: 'Industries', type: 'scroll', target: 'industries' },
+        ],
+    };
+
+    const currentNavItems = navConfigs[path] || navConfigs['/'];
 
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
@@ -15,38 +44,53 @@ const Navbar = () => {
         setIsOpen(false);
     };
 
+
+
+    const handleNavClick = (item) => {
+        if (item.label === "Home") {
+            navigate('/');
+
+            setTimeout(() => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                });
+            }, 100);
+
+            setIsOpen(false);
+            return;
+        }
+
+        if (item.type === 'scroll') {
+            scrollToSection(item.target);
+        } else {
+            navigate(item.target);
+            setIsOpen(false);
+        }
+    };
+
     return (
-        <nav className="w-full bg-white  z-50">
+        <nav className="w-full bg-white z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
 
                     {/* LEFT: Logo Area */}
-                    <div className="flex-shrink-0 w-14 h-14 flex items-center cursor-pointer" onClick={() => scrollToSection('home')}>
+                    <div className="flex-shrink-0 w-14 h-14 flex items-center cursor-pointer" onClick={() => navigate('/')}>
                         <img src="/HunarStreetLogo.svg" alt="HunarStreetLogo" />
                     </div>
 
                     {/* CENTER: Navigation Links (Pill Style - Hidden on Mobile) */}
                     <div className="hidden md:flex items-center justify-center flex-1 px-4">
                         <div className="bg-[#031530] rounded-full px-8 py-2.5 flex items-center space-x-8 shadow-md">
-                            <button
-                                onClick={() => scrollToSection('home')}
-                                className="text-yellow-500 font-semibold text-sm hover:text-yellow-400 "
-                            >
-                                Home
-                            </button>
-                            <button
-                                onClick={() => window.location.href = '#/recruitment'}
-                                className="text-white font-medium text-sm hover:text-yellow-500 transition-colors"
-                            >
-                                Recruitment
-                            </button>
-                            <button
-                                onClick={() => window.location.href = '#/lead-generation'}
-                                className="text-white font-medium text-sm hover:text-yellow-500 transition-colors"
-                            >
-                                Lead Generation
-                            </button>
-
+                            {currentNavItems.map((item, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => handleNavClick(item)}
+                                    className={`${index === 0 ? 'text-yellow-500 font-semibold' : 'text-white font-medium'} text-sm hover:text-yellow-400 transition-colors`}
+                                >
+                                    {item.label}
+                                </button>
+                            ))}
                         </div>
                     </div>
 
@@ -90,31 +134,15 @@ const Navbar = () => {
             {/* MOBILE DROPDOWN MENU */}
             <div className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-[#031530] transition-all duration-300`}>
                 <div className="px-4 pt-4 pb-6 space-y-3 shadow-lg">
-                    <button
-                        className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-yellow-500 bg-[#051937]"
-                        onClick={() => scrollToSection('home')}
-                    >
-                        Home
-                    </button>
-                    <button
-                        className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#051937] hover:text-yellow-500"
-                        onClick={() => {
-                            window.location.href = '#/recruitment';
-                            setIsOpen(false);
-                        }}
-                    >
-                        Recruitment
-                    </button>
-                    <button
-                        className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#051937] hover:text-yellow-500"
-                        onClick={() => {
-                            window.location.href = '#/lead-generation';
-                            setIsOpen(false);
-                        }}
-                    >
-                        Lead Generation
-                    </button>
-
+                    {currentNavItems.map((item, index) => (
+                        <button
+                            key={index}
+                            className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium ${index === 0 ? 'text-yellow-500 bg-[#051937]' : 'text-white hover:bg-[#051937] hover:text-yellow-500'}`}
+                            onClick={() => handleNavClick(item)}
+                        >
+                            {item.label}
+                        </button>
+                    ))}
 
                     <div className="pt-4 border-t border-gray-700">
                         <button

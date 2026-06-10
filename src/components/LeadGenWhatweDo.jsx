@@ -1,30 +1,25 @@
 
-
+import React, { useState } from "react";
 export default function StrategyChannelsSection() {
+    const [activeIndex, setActiveIndex] = useState(0);
     const features = [
         {
             text: "ICP-based prospect list building using LinkedIn Sales Navigator and verified CRM tools",
-            isActive: true, // Yellow active banner state matching your design
         },
         {
             text: "Personalised, multi-step outreach content for LinkedIn and email - reviewed and approved by you",
-            isActive: false,
         },
         {
             text: "LinkedIn connection campaigns and follow-up message sequences",
-            isActive: false,
         },
         {
             text: "Email infrastructure setup, domain warming, and deliverability monitoring",
-            isActive: false,
         },
         {
             text: "A/B testing of content and subject lines & Response management - engaging replies meaningfully",
-            isActive: false,
         },
         {
             text: "Regular performance reporting and campaign optimisation",
-            isActive: false,
         },
     ];
 
@@ -57,11 +52,11 @@ export default function StrategyChannelsSection() {
                 {/* Header Typography */}
                 <h2 className="text-2xl sm:text-4xl lg:text-[40px] font-extrabold text-center tracking-tight text-[#0A2540] leading-tight max-w-2xl">
                     One Strategy. Two Powerful <br className="hidden sm:inline" />
-                    <span className="text-[#FAC207] relative inline-block mt-4 sm:mt-4">
+                    <span className="text-[#FAC207] el-messiri relative inline-block mt-4 sm:mt-4">
                         Channels
                         {/* Custom vector underline accent */}
                         <svg
-                            className="w-full max-w-[280px] h-3 text-[#0A2540]"
+                            className="w-full max-w-[280px] h-2 text-[#0A2540]"
                             viewBox="0 0 300 12"
                             fill="currentColor"
                             preserveAspectRatio="none"
@@ -82,24 +77,39 @@ export default function StrategyChannelsSection() {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className={`flex items-start gap-4 p-5 sm:p-6 rounded-2xl transition-all duration-200 border transform hover:-translate-y-0.5
-                ${feature.isActive
-                                    ? 'bg-[#FAC207] text-[#0A2540] border-[#FAC2075E] shadow-md'
+                            onClick={() => setActiveIndex(index)}
+                            className={`cursor-pointer flex items-start gap-4 p-5 sm:p-6 rounded-2xl transition-all duration-300 border transform hover:-translate-y-1
+        ${activeIndex === index
+                                    ? 'bg-[#FAC207] text-[#0A2540] border-[#FAC207] shadow-lg'
                                     : 'bg-white text-[#0A2540] border-[#FAC2075E] shadow-[0_8px_25px_rgba(0,0,0,0.03)] hover:shadow-md'
                                 }`}
                         >
-                            {/* Custom Round Checkmark Box Icon */}
-                            <div className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center flex-shrink-0 border mt-0.5
-                ${feature.isActive ? 'border-[#0A2540]' : 'border-gray-300'}`}
+                            <div
+                                className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center flex-shrink-0 border mt-0.5
+            ${activeIndex === index
+                                        ? 'border-[#0A2540]'
+                                        : 'border-gray-300'
+                                    }`}
                             >
-                                <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-none stroke-current" strokeWidth="2.5" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                <svg
+                                    className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-none stroke-current"
+                                    strokeWidth="2.5"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M4.5 12.75l6 6 9-13.5"
+                                    />
                                 </svg>
                             </div>
 
-                            {/* Grid Feature Core Copy String */}
-                            <p className={`text-xs sm:text-sm font-semibold leading-relaxed tracking-wide
-                ${feature.isActive ? 'text-[#0A2540]' : 'text-slate-600'}`}
+                            <p
+                                className={`text-xs sm:text-sm font-semibold leading-relaxed tracking-wide
+            ${activeIndex === index
+                                        ? 'text-[#0A2540]'
+                                        : 'text-slate-600'
+                                    }`}
                             >
                                 {feature.text}
                             </p>

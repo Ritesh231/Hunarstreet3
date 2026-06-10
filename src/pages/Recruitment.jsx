@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Rnavbar from '../components/Rnavbar.jsx';
 import blurboll from '../assets/RecruitmentPageAssets/Ellipse 36.png'
 import logo from '../assets/RecruitmentPageAssets/img1046 1.png';
 // import hero1 from '../assets/RecruitmentPageAssets/Ellipse 9.png';
@@ -36,25 +35,18 @@ import tech12 from '../assets/RecruitmentPageAssets/ChatGPT Image Jun 6, 2026, 0
 import LeadGenClientTestomonial from '../components/LeadGenClientTestomonial';
 import LeadGenGrowth from '../components/LeadGenGrowth';
 import LeadGenBottomSection from '../components/LeadGenBottomSection';
+import LeadGenFrequentlyaskedQuestions from "../components/LeadGenFrequentlyaskedQuestions";
+import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const Recruitment = () => {
     const [isDemoOpen, setIsDemoOpen] = useState(false);
 
     return (
         <div className='relative w-full min-h-screen overflow-hidden '>
-            <Rnavbar setIsDemoOpen={setIsDemoOpen} isDemoOpen={isDemoOpen} />
+            <Navbar setIsDemoOpen={setIsDemoOpen} isDemoOpen={isDemoOpen} />
 
-            <img src={blurboll} alt="BlurOval" className='absolute -bottom-32 -left-32 w-96 h-96 object-cover' />
-            <img src={logo} alt="Logo" className='hidden lg:block absolute top-[31px] left-8 w-16 h-16 ' />
-            <button
-                type="button"
-                onClick={() => setIsDemoOpen(true)}
-                className="font-messiri absolute hidden lg:block top-[31px]  z-[9999]  right-8 z-20 inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#FAC207] px-4 py-2 text-base font-semibold text-[#041C3E] shadow-[0_0_25px_rgba(250,194,7,0.55)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#041C3E] hover:text-white lg:px-5 lg:py-3"
-            >
-                {/* <i className="ri-calendar-2-line text-lg"></i> */}
-                Schedule Demo
-            </button>
-            <section id="home" className="min-h-screen grid grid-cols-1 text-center  lg:grid-cols-5 lg:text-left items-center justify-items-center px-8  lg:gap-8  w-full">
+            <section id="home" className="min-h-screen grid grid-cols-1 text-center -mt-8  lg:grid-cols-5 lg:text-left items-center justify-items-center px-8  lg:gap-8  w-full">
 
                 <div className='col-span-3 lg:hidden mt-24'>
 
@@ -64,8 +56,8 @@ const Recruitment = () => {
                 <div className='col-span-2  grid items-center justify-items-center lg:items-start lg:justify-items-start gap-4'>
 
                     <p className='  text-center mt-20 font-jakarta font-semibold text-lg text-[#041C3E] bg-[#90BEFF82] p-2 rounded-lg'>Industry-Specific Hiring Experts</p>
-                    <h2 className='text-4xl font-jakarta font-semibold text-[#041C3E] mt-6'>India's Fastest Hiring</h2>
-                    <div className='flex items-center gap-4 mt-4 mb-8  justify-center lg:justify-start  flex-col sm:flex-row  items-center'>
+                    <h2 className='text-4xl lg:text-[44px] font-jakarta font-semibold text-[#041C3E] mt-6'>India's Fastest Hiring</h2>
+                    <div className='flex items-center gap-4 mt-4 justify-center lg:justify-start  flex-col sm:flex-row  items-center'>
                         <img src={hero3} alt="Hero 1" className='' />
                         <div clasName='  overflow-hidden  '>
                             <h1 className='font-messiri font-semibold text-4xl lg:text-6xl text-[#FAC207]'>Platform</h1>
@@ -88,35 +80,35 @@ const Recruitment = () => {
                 </div>
             </section>
 
-            <section id="about" className='grid min-h-screen grid-cols-1 lg:grid-cols-2 px-8 lg:px-16 gap-12 py-24 w-full items-center relative overflow-hidden'
+            <section id="about" className='grid min-h-screen grid-cols-1 lg:grid-cols-2 px-8 lg:px-16 gap-8 py-24 w-full items-center relative overflow-hidden'
                 style={{ backgroundImage: `url(${grayback})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className='relative w-full h-[400px] md:h-[480px] flex items-center justify-center mt-12 lg:mt-0'>
                     {/* Megaphone top-left */}
                     <img src={sound} className='absolute -top-6 lg:top-4 -left-2 lg:left-4 w-20 md:w-28 z-10 transform -rotate-[15deg]' alt="megaphone" />
 
                     {/* Top-right image (ses22) */}
-                    <img src={ses22} className='absolute top-2 md:top-6 right-0 lg:right-6 w-[60%] md:w-[55%] rounded-[30px] shadow-[0_10px_30px_rgba(0,0,0,0.15)] z-20 object-cover' alt="recruitment 1" />
+                    <img src={ses22} className='absolute top-2 md:top-6 right-0 lg:right-6 w-[60%] md:w-[55%] rounded-[30px] shadow-[0_10px_30px_rgba(0,0,0,0.3)] z-20 object-cover' alt="recruitment 1" />
 
                     {/* Bottom-left image (ses23) */}
-                    <img src={ses23} className='absolute bottom-2 md:bottom-8 left-4 lg:left-8 w-[65%] md:w-[60%] rounded-[30px] shadow-[0_10px_30px_rgba(0,0,0,0.15)] z-30 object-cover' alt="recruitment 2" />
+                    <img src={ses23} className='absolute bottom-2 md:bottom-16 left-4 lg:left-8 w-[65%] md:w-[60%] rounded-[30px] shadow-[0_10px_30px_rgba(0,0,0,0.3)] z-30 object-cover' alt="recruitment 2" />
 
                     {/* Star in middle */}
-                    <img src={star} className='absolute top-[48%] left-[48%] transform -translate-x-1/2 -translate-y-1/2 w-24 md:w-32 z-40' alt="star" />
+                    <img src={star} className='absolute top-[48%] left-[65%] transform -translate-x-1/2 -translate-y-1/2 w-24 md:w-28 z-40' alt="star" />
                 </div>
 
                 <div className='flex flex-col items-start justify-center h-full pt-8 lg:pt-0 relative z-10'>
                     <div className="inline-block bg-[#C6DDFB] text-[#041C3E] font-bold text-sm px-4 py-2 rounded-lg mb-6 uppercase tracking-wide">
                         About Recruitment
                     </div>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-jakarta font-bold text-[#041C3E] leading-tight">
+                    <h2 className="text-4xl lg:text-[44px] font-jakarta font-semibold text-[#041C3E] leading-tight">
                         Recruitment That Delivers<br />
-                        <span className="text-[#FFC600] font-messiri relative inline-block mt-2">
+                        <span className="text-[#FFC600] lg:text-6xl font-messiri relative inline-block mt-2">
                             Results
                             <img src={line} alt="underline" className="absolute -bottom-3 left-0 w-full object-contain" />
                         </span>
                     </h2>
 
-                    <div className="flex flex-col sm:flex-row gap-5 mt-12 w-full relative lg:w-[90%]">
+                    <div className="flex flex-col sm:flex-row gap-5 mt-12 w-full relative lg:w-[80%]">
                         {/* Card 1 */}
                         <div className="bg-[#041C3E] rounded-[24px] p-5 flex-1 text-white shadow-xl flex flex-col justify-between min-h-[190px] relative z-10">
                             <div className="flex items-start justify-between">
@@ -140,16 +132,16 @@ const Recruitment = () => {
                         </div>
 
                         {/* Bottom-right megaphone */}
-                        <img src={sound} className='absolute -bottom-12 -right-8 lg:-right-12 w-20 md:w-28 z-0 transform rotate-[15deg] opacity-80 scale-x-[-1]' alt="megaphone" />
+                        <img src={sound} className='absolute -bottom-12 -right-8 lg:-right-28 w-20 md:w-28 z-0 transform rotate-[12deg] opacity-80 scale-x-[-1]' alt="megaphone" />
                     </div>
                 </div>
             </section>
 
             {/* Impact in Numbers Section */}
             <section className="bg-[#041C3E]   py-24 lg:py-0 px-6 lg:px-8 w-full flex flex-col items-center justify-center lg:min-h-screen relative z-20 ">
-                <div className="text-center mb-12 max-w-3xl mt-6">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-jakarta font-bold text-white mb-4">
-                        Impact in <span className="text-[#FAC207] font-messiri relative inline-block">
+                <div className="text-center mb-12 mt-6">
+                    <h2 className="text-3xl lg:text-[44px] font-jakarta font-semibold text-white mb-2">
+                        Impact in <span className="text-[#FAC207] font-messiri relative inline-block lg:text-5xl">
                             Numbers
                             <img src={line} alt="underline" className="absolute -bottom-2 left-0 w-full object-contain" />
                         </span>
@@ -168,7 +160,7 @@ const Recruitment = () => {
 
                         {/* Stat 1 */}
                         <div className="flex flex-col items-center justify-center text-center px-2 lg:px-4 hidden lg:flex">
-                            <h3 className="text-[#FAC207] text-3xl   lg:text-4xl xl:text-4xl font-bold font-jakarta mb-2 lg:mb-4">1,20,000 +</h3>
+                            <h3 className="text-[#FAC207] text-3xl   lg:text-4xl xl:text-4xl font-bold  mb-2 lg:mb-4">1,20,000 +</h3>
                             <p className="text-white text-lg lg:text-xl font-jakarta">Candidate<br className="hidden lg:block" />Network</p>
                         </div>
 
@@ -216,57 +208,107 @@ const Recruitment = () => {
                 style={{ backgroundImage: `url(${grayback})` }}>
                 {/* Blur effects */}
 
-                <div className="relative z-10 text-center mb-16 max-w-4xl">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-jakarta font-bold text-[#041C3E] mb-6">
-                        Our 4 Step <span className="text-[#FAC207] font-messiri relative inline-block">
+                <div className="relative z-10 text-center mb-16 max-w-4xl ">
+                    <h2 className="text-4xl lg:text-[44px] font-jakarta font-bold text-[#041C3E] mb-6">
+                        Our 4 Step <span className="text-[#FAC207] font-messiri relative inline-block lg:text-5xl">
                             Hiring
                             <img src={line} alt="underline" className="absolute -bottom-2 left-0 w-full object-contain" />
                         </span>
                     </h2>
-                    <p className="text-[#041C3E] text-lg md:text-xl font-jakarta font-medium">
+                    <p className="text-[#041C3E] text-lg md:text-lg font-jakarta font-medium">
                         From understanding your requirements to successful onboarding, we manage every step of the recruitment process.
                     </p>
                 </div>
 
-                <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 lg:gap-4 w-full max-w-[1400px]">
+                <div className="relative z-10 w-full">
+                    <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-4">
 
-                    {/* Step 1 */}
-                    <div className="flex flex-col items-center text-center w-full max-w-[280px]">
-                        <img src={step1} alt="Step 1" className="w-full h-auto mb-6 drop-shadow-2xl hover:-translate-y-2 transition-transform duration-300" />
-                        <h3 className="text-[#041C3E] text-xl font-bold font-jakarta mb-3">Share Your Hiring<br />Requirements</h3>
-                        <p className="text-[#041C3E] text-sm font-jakarta">Submit your job description and hiring needs.</p>
+                        {/* Step 1 */}
+                        <div className="flex flex-col items-center text-center flex-1 max-w-[260px]">
+                            <img
+                                src={step1}
+                                alt="Step 1"
+                                className="w-full max-w-[220px] h-auto mb-6 hover:-translate-y-2 transition-transform duration-300"
+                            />
+                            <h3 className="text-[#041C3E] text-xl font-bold font-jakarta mb-3">
+                                Share Your Hiring <br />
+                                Requirements
+                            </h3>
+                            <p className="text-[#041C3E] text-sm leading-relaxed">
+                                Submit your job description and hiring needs.
+                            </p>
+                        </div>
+
+                        {/* Arrow */}
+                        <img
+                            src={vector10}
+                            alt=""
+                            className="hidden lg:block w-[90px] mt-16 flex-shrink-0"
+                        />
+
+                        {/* Step 2 */}
+                        <div className="flex flex-col items-center text-center flex-1 max-w-[260px]">
+                            <img
+                                src={step2}
+                                alt="Step 2"
+                                className="w-full max-w-[220px] h-auto mb-6 hover:-translate-y-2 transition-transform duration-300"
+                            />
+                            <h3 className="text-[#041C3E] text-xl font-bold font-jakarta mb-3">
+                                Dedicated Domain <br />
+                                Specialists
+                            </h3>
+                            <p className="text-[#041C3E] text-sm leading-relaxed">
+                                Experienced recruiters focused on your hiring goals.
+                            </p>
+                        </div>
+
+                        {/* Arrow */}
+                        <img
+                            src={vector11}
+                            alt=""
+                            className="hidden lg:block w-[90px] mt-16 flex-shrink-0"
+                        />
+
+                        {/* Step 3 */}
+                        <div className="flex flex-col items-center text-center flex-1 max-w-[260px]">
+                            <img
+                                src={step3}
+                                alt="Step 3"
+                                className="w-full max-w-[220px] h-auto mb-6 hover:-translate-y-2 transition-transform duration-300"
+                            />
+                            <h3 className="text-[#041C3E] text-xl font-bold font-jakarta mb-3">
+                                Sourcing Through <br />
+                                Social Media
+                            </h3>
+                            <p className="text-[#041C3E] text-sm leading-relaxed">
+                                Targeted candidate search through professional networks.
+                            </p>
+                        </div>
+
+                        {/* Arrow */}
+                        <img
+                            src={vector12}
+                            alt=""
+                            className="hidden lg:block w-[90px] mt-16 flex-shrink-0"
+                        />
+
+                        {/* Step 4 */}
+                        <div className="flex flex-col items-center text-center flex-1 max-w-[260px]">
+                            <img
+                                src={step4}
+                                alt="Step 4"
+                                className="w-full max-w-[220px] h-auto mb-6 hover:-translate-y-2 transition-transform duration-300"
+                            />
+                            <h3 className="text-[#041C3E] text-xl font-bold font-jakarta mb-3">
+                                Extensive Talent <br />
+                                Network
+                            </h3>
+                            <p className="text-[#041C3E] text-sm leading-relaxed">
+                                Access 1,20,000+ pre-screened professionals.
+                            </p>
+                        </div>
+
                     </div>
-
-                    {/* Vector 10 */}
-                    <img src={vector10} alt="arrow" className="hidden lg:block w-[80px] xl:w-[100px] mt-24 flex-shrink-0" />
-
-                    {/* Step 2 */}
-                    <div className="flex flex-col items-center text-center w-full max-w-[280px]">
-                        <img src={step2} alt="Step 2" className="w-full h-auto mb-6 drop-shadow-2xl hover:-translate-y-2 transition-transform duration-300" />
-                        <h3 className="text-[#041C3E] text-xl font-bold font-jakarta mb-3">Dedicated Domain<br />Specialists</h3>
-                        <p className="text-[#041C3E] text-sm font-jakarta">Experienced recruiters focused on your hiring goals.</p>
-                    </div>
-
-                    {/* Vector 11 */}
-                    <img src={vector11} alt="arrow" className="hidden lg:block w-[80px] xl:w-[100px] mt-24 flex-shrink-0" />
-
-                    {/* Step 3 */}
-                    <div className="flex flex-col items-center text-center w-full max-w-[280px]">
-                        <img src={step3} alt="Step 3" className="w-full h-auto mb-6 drop-shadow-2xl hover:-translate-y-2 transition-transform duration-300" />
-                        <h3 className="text-[#041C3E] text-xl font-bold font-jakarta mb-3">Sourcing Through<br />Social Media</h3>
-                        <p className="text-[#041C3E] text-sm font-jakarta">Targeted candidate search through professional networks.</p>
-                    </div>
-
-                    {/* Vector 12 */}
-                    <img src={vector12} alt="arrow" className="hidden lg:block w-[80px] xl:w-[100px] mt-24 flex-shrink-0" />
-
-                    {/* Step 4 */}
-                    <div className="flex flex-col items-center text-center w-full max-w-[280px]">
-                        <img src={step4} alt="Step 4" className="w-full h-auto mb-6 drop-shadow-2xl hover:-translate-y-2 transition-transform duration-300" />
-                        <h3 className="text-[#041C3E] text-xl font-bold font-jakarta mb-3">Extensive Talent<br />Network</h3>
-                        <p className="text-[#041C3E] text-sm font-jakarta">Access 1,20,000+ pre-screened professionals.</p>
-                    </div>
-
                 </div>
             </section>
 
@@ -280,9 +322,9 @@ const Recruitment = () => {
                         <div className="inline-block bg-[#C6DDFB] text-[#041C3E] font-bold text-sm px-4 py-2 rounded-lg mb-6 uppercase tracking-wide">
                             Why Choose Us ?
                         </div>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-jakarta font-bold text-[#041C3E] leading-tight">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl lg:text-[44px] font-semibold font-jakarta text-[#041C3E] leading-tight">
                             Finding the right talent<br />
-                            shouldn't be <span className="text-[#FAC207] font-messiri">complicated.</span>
+                            shouldn't be <span className="text-[#FAC207] font-messiri lg:text-5xl">complicated.</span>
                         </h2>
                     </div>
                     <div className="max-w-md lg:mb-4">
@@ -367,8 +409,8 @@ const Recruitment = () => {
             <section id="industries" className="w-full bg-[#041C3E] py-24   flex flex-col items-center rounded-t-[40px] md:rounded-t-[80px] z-20 relative overflow-hidden">
                 {/* Part 1: Industries We Service */}
                 <div className="flex flex-col items-center text-center w-full mb-32">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-jakarta font-bold text-white mb-6">
-                        Industries We <span className="text-[#FAC207] font-messiri relative inline-block">
+                    <h2 className="text-4xl  lg:text-[44px] font-jakarta font-semibold text-white mb-6">
+                        Industries We <span className="text-[#FAC207] font-messiri lg:text-5xl relative inline-block">
                             Service
                             <img src={line} alt="underline" className="absolute -bottom-2 left-0 w-full object-contain" />
                         </span>
@@ -413,7 +455,7 @@ const Recruitment = () => {
                 </div>
 
                 {/* Part 2: Trusted By Leading Company */}
-                <div className="w-full md:ml-32 lg:-ml-36 max-w-[1000px] flex flex-col lg:flex-row justify-between pb-12">
+                <div className="w-full -ml-36 max-w-[1000px] flex flex-col lg:flex-row  justify-between   pb-12">
                     {/* Left Text Side */}
                     <div className="max-w-2xl text-left w-full relative z-10 flex flex-col items-center xl:items-start text-center xl:text-left">
                         <div className="inline-block bg-[#4A6799] text-white font-bold text-sm px-6 py-3 rounded-lg mb-8 uppercase tracking-wider shadow-sm">
@@ -424,9 +466,9 @@ const Recruitment = () => {
                             <img src={sound} className="w-20 md:w-28 absolute -top-24 xl:-top-20 right-0 xl:right-16 transform -rotate-12 z-0 opacity-90" alt="megaphone" />
                         </div>
 
-                        <h2 className="text-4xl md:text-5xl lg:text-[56px] font-jakarta font-bold text-white leading-tight relative z-10">
+                        <h2 className="text-4xl  lg:text-[44px] font-jakarta font-semibold text-white leading-tight relative z-10">
                             Trusted By Leading<br className="hidden xl:block" />
-                            <span className="text-[#FAC207] font-messiri relative inline-block mt-3 xl:mt-2">
+                            <span className="text-[#FAC207] lg:text-5xl font-messiri relative inline-block mt-3 xl:mt-2">
                                 Company
                                 <img src={line} alt="underline" className="absolute -bottom-3 left-0 w-full object-contain" />
                             </span>
@@ -487,9 +529,9 @@ const Recruitment = () => {
                     <div className="inline-block bg-[#C6DDFB] text-[#041C3E] font-bold text-sm px-6 py-2 rounded-lg mb-6 tracking-wide">
                         POSITIONS
                     </div>
-                    <h2 className="text-4xl md:text-5xl lg:text-[56px] font-jakarta font-bold text-[#041C3E] leading-tight mb-6">
+                    <h2 className="text-4xl md:text-5xl  font-jakarta font-semibold text-[#041C3E] leading-tight mb-6">
                         Connecting Businesses with the<br className="hidden md:block" />
-                        <span className="text-[#FAC207] font-messiri relative inline-block mt-2">
+                        <span className="text-[#FAC207] font-messiri lg:text-5xl relative inline-block mt-2">
                             Right Talent
                             <img src={line} alt="underline" className="absolute -bottom-2 left-0 w-full object-contain" />
                         </span>
@@ -503,9 +545,9 @@ const Recruitment = () => {
                         <button className="bg-[#041C3E] text-[#FAC207] font-bold font-jakarta px-8 py-4 rounded-2xl shadow-lg hover:-translate-y-1 transition-transform">
                             Technical
                         </button>
-                        <button className="bg-[#E2EFFF] text-[#8BA4C8] font-bold font-jakarta px-8 py-4 rounded-2xl shadow-sm hover:-translate-y-1 transition-transform">
+                        <Link to="https://www.hunarstreet.com/#expertise" className="bg-[#E2EFFF] text-[#8BA4C8] font-bold font-jakarta px-8 py-4 rounded-2xl shadow-sm hover:-translate-y-1 transition-transform">
                             Non - Technical
-                        </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -517,15 +559,19 @@ const Recruitment = () => {
                         {/* Active Role */}
                         <div className="bg-[#041C3E] text-white rounded-[20px] px-6 py-5 flex items-center justify-between shadow-lg cursor-pointer hover:-translate-y-1 transition-transform">
                             <span className="font-jakarta font-semibold text-[17px]">Staff Software Engineer</span>
-                            <i className="ri-play-fill text-white text-2xl"></i>
+                            <i className="ri-play-fill text-white  text-2xl"></i>
                         </div>
+                        <Link to="https://www.hunarstreet.com/#expertise" className="bg-white   rounded-[20px] px-6 py-5 flex items-center justify-between shadow-lg cursor-pointer hover:-translate-y-1 transition-transform">
+                            <span className="font-jakarta font-semibold text-[#041C3E] text-[17px]">Machine Learning Engineer</span>
+                            <i className="ri-play-fill text-[#FAC207] text-2xl"></i>
+                        </Link>
 
                         {/* Inactive Roles */}
-                        {['Machine Learning Engineer', 'Data Science Engineer', 'DevOps Engineer', 'Front-End Developers', 'Back-End Developers'].map((role, idx) => (
-                            <div key={idx} className="bg-white text-[#041C3E] rounded-[20px] px-6 py-5 flex items-center justify-between shadow-sm cursor-pointer hover:-translate-y-1 transition-transform">
+                        {['Data Science Engineer', 'DevOps Engineer', 'Front-End Developers', 'Back-End Developers'].map((role, idx) => (
+                            <Link key={idx} className="bg-white text-[#041C3E] rounded-[20px] px-6 py-5 flex items-center justify-between shadow-sm cursor-pointer hover:-translate-y-1 transition-transform">
                                 <span className="font-jakarta font-semibold text-[17px]">{role}</span>
                                 <i className="ri-play-fill text-[#FAC207] text-2xl"></i>
-                            </div>
+                            </Link>
                         ))}
 
                         {/* View All Button */}
@@ -548,7 +594,7 @@ const Recruitment = () => {
 
             </section>
             <LeadGenClientTestomonial />
-            <LeadGenGrowth />
+            <LeadGenFrequentlyaskedQuestions />
             <LeadGenBottomSection />
         </div>
     );
